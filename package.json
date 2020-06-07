@@ -1,0 +1,27 @@
+{
+  "name": "tiddlywiki-plugins",
+  "description": "My TiddlyWiki plugins and themes.",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/unindented/tiddlywiki-plugins",
+  "author": {
+    "name": "Daniel Perez Alvarez",
+    "email": "unindented@gmail.com",
+    "url": "http://unindented.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unindented/tiddlywiki-plugins.git"
+  },
+  "scripts": {
+    "start": "cross-env TIDDLYWIKI_PLUGIN_PATH=\"./plugins\" TIDDLYWIKI_THEME_PATH=\"./themes\" tiddlywiki demo --listen",
+    "build": "cross-env TIDDLYWIKI_PLUGIN_PATH=\"./plugins\" TIDDLYWIKI_THEME_PATH=\"./themes\" tiddlywiki demo --build index",
+    "deploy": "gh-pages -d demo/output"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.2",
+    "gh-pages": "3.0.0",
+    "tiddlywiki": "5.1.22"
+  }
+}

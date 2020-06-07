@@ -1,0 +1,7 @@
+title: Diff Example
+created: 20200613221946060
+modified: 20200613221952216
+
+A `DiffTextWidget` example:
+
+<$diff-text source="Hey Jude, don't make it bad. Take a sad song and make it better. Remember to let her into your heart. Then you can start to make it better." dest="Hey Jude, don't be afraid. You were made to go out and get her. The minute you let her under your skin. Then you begin to make it better."/>

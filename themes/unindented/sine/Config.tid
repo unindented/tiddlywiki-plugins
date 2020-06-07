@@ -1,0 +1,19 @@
+title: $:/themes/unindented/sine/Config
+tags: $:/tags/ControlPanel/Appearance
+caption: {{$:/language/unindented/sine/Config/caption}}
+
+\define lingo-base() $:/language/unindented/sine/Config/
+
+<<lingo description>>
+
+! <<lingo palettes>>
+
+|<$link to="$:/themes/unindented/sine/Database/lightpalette"><<lingo lightpalette>></$link> |<$edit-text tiddler="$:/themes/unindented/sine/Database/lightpalette" default="" tag="input"/> |
+|<$link to="$:/themes/unindented/sine/Database/darkpalette"><<lingo darkpalette>></$link> |<$edit-text tiddler="$:/themes/unindented/sine/Database/darkpalette" default="" tag="input"/> |
+
+! <<lingo sizes>>
+
+|<$link to="$:/themes/unindented/sine/Database/maxfontsize"><<lingo maxfontsize>></$link> |<$edit-text tiddler="$:/themes/unindented/sine/Database/maxfontsize" default="" tag="input"/> |
+|<$link to="$:/themes/unindented/sine/Database/maxbodyfontsize"><<lingo maxbodyfontsize>></$link> |<$edit-text tiddler="$:/themes/unindented/sine/Database/maxbodyfontsize" default="" tag="input"/> |
+|<$link to="$:/themes/unindented/sine/Database/minscreensize"><<lingo minscreensize>></$link> |<$edit-text tiddler="$:/themes/unindented/sine/Database/minscreensize" default="" tag="input"/> |
+|<$link to="$:/themes/unindented/sine/Database/maxscreensize"><<lingo maxscreensize>></$link> |<$edit-text tiddler="$:/themes/unindented/sine/Database/maxscreensize" default="" tag="input"/> |

@@ -1,0 +1,190 @@
+title: Code Example
+created: 20200610233218232
+modified: 20200613003156063
+
+Some inline `code`.
+
+!! No highlight
+
+```
+  ! " # $ % & ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; < = > ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~
+```
+
+!! C
+
+```c
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+  printf("Hello, world!\n");
+  return 0;
+}
+```
+
+!! C++
+
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+  cout << "Hello, world!" << endl;
+  return 0;
+}
+```
+
+!! C#
+
+```csharp
+using System;
+class Program {
+  public static void Main() {
+    Console.WriteLine("Hello, world!");
+  }
+}
+```
+
+!! CSS
+
+```css
+body::before {
+  content: "Hello, world!";
+}
+```
+
+!! Elixir
+
+```elixir
+IO.puts "Hello, world!"
+```
+
+!! Erlang
+
+```erlang
+io:format("~s~n", ["Hello, world!"])
+```
+
+!! Go
+
+```go
+package main
+import "fmt"
+func main() {
+  fmt.Println("Hello, world!")
+}
+```
+
+!! Haskell
+
+```haskell
+main = putStrLn "Hello, world!"
+```
+
+!! HTML
+
+```html
+<html>
+  <body>
+    Hello, world!
+  </body>
+</html>
+```
+
+!! Java
+
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+```
+
+!! ~JavaScript
+
+```javascript
+console.log("Hello, world!");
+```
+
+!! Kotlin
+
+```kotlin
+fun main(args : Array<String>) {
+  println("Hello, world!")
+}
+```
+
+!! Lua
+
+```lua
+print("Hello, world!")
+```
+
+!! Objective-C
+
+```objectivec
+#import <stdio.h>
+int main(void) {
+  printf("Hello, world!\n");
+  return 0;
+}
+```
+
+!! Perl
+
+```perl
+print "Hello, world!";
+```
+
+!! PHP
+
+```php
+<?= 'Hello, world!' ?>
+```
+
+!! Python
+
+```python
+print "Hello, world!"
+```
+
+!! R
+
+```r
+cat('Hello, world!')
+```
+
+!! Ruby
+
+```ruby
+puts "Hello, world!"
+```
+
+!! Rust
+
+```rust
+fn main() {
+  println!("Hello, world!");
+}
+```
+
+!! Shell
+
+```sh
+echo 'Hello, world!'
+```
+
+!! Swift
+
+```swift
+println("Hello, world!")
+```
+
+!! ~TypeScript
+
+```typescript
+console.log("Hello, world!");
+```

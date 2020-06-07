@@ -1,0 +1,10 @@
+title: $:/themes/tiddlywiki/vanilla/
+
+metrics/fontsize: 15px
+metrics/lineheight: 1.5
+metrics/bodyfontsize: 16px
+metrics/bodylineheight: 1.5
+metrics/sidebarwidth: 33%
+options/sidebarlayout: fluid-fixed
+settings/fontfamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+settings/codefontfamily: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace

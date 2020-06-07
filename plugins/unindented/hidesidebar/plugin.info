@@ -1,0 +1,9 @@
+{
+  "title": "$:/plugins/unindented/hidesidebar",
+  "name": "Hide Sidebar",
+  "description": "Automatically hide the sidebar on narrow screens",
+  "author": "Daniel Perez Alvarez",
+  "list": "readme",
+  "core-version": ">=5.1.0",
+  "plugin-type": "plugin"
+}

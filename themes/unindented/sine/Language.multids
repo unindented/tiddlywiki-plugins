@@ -1,0 +1,23 @@
+title: $:/language/unindented/sine/
+
+Splash/text: {{$:/SiteTitle}} is loading...
+
+Config/caption: Sine Tweaks
+Config/description: You can tweak certain aspects of the ''Sine'' theme.
+Config/palettes: Palettes
+Config/lightpalette: Light palette
+Config/darkpalette: Dark palette
+Config/sizes: Sizes
+Config/maxfontsize: Max font size
+Config/maxbodyfontsize: Max font size for tiddler body
+Config/minscreensize: Min screen size
+Config/maxscreensize: Max screen size
+
+Buttons/PaletteSwitcher/caption: palette
+Buttons/PaletteSwitcher/description: Toggle between light and dark colour palette
+Buttons/PaletteSwitcher/light/text: light
+Buttons/PaletteSwitcher/light/tooltip: Switch to light palette
+Buttons/PaletteSwitcher/light/label: switch to light palette
+Buttons/PaletteSwitcher/dark/text: dark
+Buttons/PaletteSwitcher/dark/tooltip: Switch to dark palette
+Buttons/PaletteSwitcher/dark/label: switch to dark palette

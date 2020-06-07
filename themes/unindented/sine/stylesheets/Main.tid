@@ -1,0 +1,199 @@
+title: $:/themes/unindented/sine/stylesheets/Main
+tags: $:/tags/Stylesheet
+
+\rules only filteredtranscludeinline transcludeinline macrocallinline
+
+/* Implement fluid typography */
+<<fluid-typography-global selector:"html">>
+<<fluid-typography-body selector:"body.tc-body .tc-tiddler-frame .tc-tiddler-body">>
+body.tc-body {
+  font-size: inherit;
+}
+
+/* Adjusted from Seamless theme */
+html body.tc-body {
+  background-color: <<colour background>>;
+}
+html:-webkit-full-screen {
+  background-color: <<colour background>>;
+}
+body.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {
+  background-color: <<colour background>>;
+}
+body.tc-body .tc-tiddler-frame {
+  border: 0;
+  padding: 0 14px;
+  margin-bottom: 58px;
+}
+body.tc-body .tc-tiddler-info {
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Give a bit more space to title icons */
+body.tc-body .tc-tiddler-title-icon {
+  margin-right: 10px;
+}
+
+/* Increase size of title icons */
+body.tc-body .tc-tiddler-title-icon svg {
+  height: .9em;
+  width: 1em;
+}
+
+/* Hide empty elements so that title and subtitle align with body */
+body.tc-body .tc-titlebar .tc-tiddler-title-icon:empty,
+body.tc-body .tc-subtitle > .tc-tiddlylink:empty {
+  margin-right: 0;
+}
+
+/* Reposition top bar elements */
+body.tc-body .tc-topbar-left {
+  top: 5px;
+  left: 5px;
+}
+body.tc-body .tc-topbar-right {
+  top: 5px;
+  right: 5px;
+}
+
+/* Align page control buttons with tiddler control buttons */
+body.tc-body .tc-page-controls {
+  font-size: 2.35em;
+  line-height: 1.2em;
+  margin-top: calc(-1em / 2.35);
+}
+body.tc-body .tc-page-controls button {
+  margin-right: 5px;
+}
+body.tc-body .tc-page-controls button svg.tc-image-button,
+body.tc-body .tc-page-controls button .tc-image-button img {
+  height: .75em;
+}
+
+/* Fix alignment of search dropdown */
+body.tc-body .tc-block-dropdown.tc-search-drop-down {
+  margin-left: 0;
+}
+
+/* Let menu list items wrap normally */
+body.tc-body .tc-menu-list-item {
+  white-space: normal;
+}
+
+/* Change the vertical alignment of the menu list mini buttons */
+body.tc-body .tc-sidebar-lists button.tc-btn-mini {
+  vertical-align: text-bottom;
+}
+
+/* Change the color of the menu list mini buttons */
+body.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg {
+  fill: <<colour sidebar-muted-foreground>>;
+}
+body.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini:hover svg {
+  fill: <<colour sidebar-muted-foreground-hover>>;
+}
+
+/* Increase padding of menu list subitems */
+body.tc-body .tc-menu-list-subitem {
+  padding-left: 14px;
+}
+
+body.tc-body .tc-remove-tag-button {
+  fill: <<colour tag-foreground>>;
+}
+
+/* Increase padding for draft indicators */
+body.tc-body .tc-drafts-list a {
+  padding: 14px;
+}
+
+/* Reset the font weight for these things */
+h1, h2, h3, h4, h5, h6,
+body.tc-body a.tc-tiddlylink,
+body.tc-body button.tc-tiddlylink {
+  font-weight: 400;
+}
+
+/* Add indicator to external links */
+body.tc-body .tc-tiddlylink-external::after {
+  content: ' ↗';
+}
+
+/* Uniformize backgrounds and borders */
+html button,
+select {
+  border: 1px solid <<colour button-border>>;
+}
+textarea,
+input[type="text"],
+input[type="search"],
+input[type=""],
+input:not([type]) {
+	background-color: <<colour tiddler-editor-background>>;
+	border: 1px solid <<colour tiddler-editor-border>>;
+}
+html button,
+select,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type=""],
+input:not([type]),
+.tc-drop-down {
+  border-radius: 2px;
+}
+.tc-alert,
+.tc-notification {
+  border-radius: 6px;
+}
+
+/* Fix padding of some blocks */
+blockquote {
+  margin-left: 0;
+}
+pre {
+  max-width: calc(100vw - 28px);
+  padding: 14px;
+}
+
+@media (hover: hover) {
+
+  /* Hide tiddler controls until hover */
+  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {
+    opacity: 0;
+    <<transition "opacity 150ms ease-in-out">>
+  }
+  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$="%2Fcore%2Fui%2FButtons%2Fclose"],
+  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,
+  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,
+  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,
+  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {
+    opacity: 1;
+  }
+
+}
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+  /* Adjusted from Seamless theme */
+  body.tc-body .tc-tiddler-frame {
+    padding: 0;
+  }
+  body.tc-body .tc-tiddler-info {
+    margin: 0;
+  }
+  body.tc-body .tc-message-box {
+    margin: 21px 0 21px 0;
+  }
+
+  /* Align page control buttons with tiddler control buttons */
+  body.tc-body .tc-sidebar-scrollable {
+    padding: 42px 0 28px 42px;
+  }
+  body.tc-body .tc-sidebar-header {
+    padding: 0;
+  }
+
+}

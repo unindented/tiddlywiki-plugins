@@ -1,0 +1,60 @@
+title: $:/themes/unindented/sine/stylesheets/Jumbotron
+tags: $:/tags/Stylesheet
+
+\rules only filteredtranscludeinline transcludeinline macrocallinline
+
+/* Jumbotron */
+body.tc-body .tc-dropzone {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.tc-jumbotron,
+body.tc-body .tc-sidebar-scrollable,
+body.tc-body .tc-story-river {
+  flex: 100% 3;
+}
+.tc-jumbotron {
+  background-image: linear-gradient(135deg, <<colour jumbotron-background-1>>, <<colour jumbotron-background-2>>);
+  color: <<colour background>>;
+  text-align: center;
+  text-transform: lowercase;
+}
+.tc-jumbotron::after {
+  background-color: <<colour background>>;
+  clip-path: url("#jumbotron-clip");
+  content: ' ';
+  display: block;
+  height: 2em;
+  margin: -1px 0;
+}
+.tc-jumbotron h1 {
+  font-size: 8em;
+  font-weight: bold;
+  margin: 0 0 -.25em;
+}
+
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+
+  <<if-no-sidebar "
+  body.tc-body .tc-sidebar-scrollable {
+    display: none;
+  }
+  ">>
+  body.tc-body .tc-sidebar-scrollable {
+    flex: 1;
+    margin: 0;
+    overflow: initial !important;
+    position: static;
+    width: auto;
+  }
+  body.tc-body .tc-sidebar-scrollable > div {
+    position: sticky;
+    top: 0;
+  }
+  body.tc-body .tc-story-river {
+    flex: 2;
+    margin-right: 0;
+  }
+
+}

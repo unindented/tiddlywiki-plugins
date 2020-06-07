@@ -1,0 +1,11 @@
+title: $:/plugins/unindented/hidesidebar/Config
+tags: $:/tags/ControlPanel/Appearance
+caption: {{$:/language/unindented/hidesidebar/Config/caption}}
+
+\define lingo-base() $:/language/unindented/hidesidebar/Config/
+
+<<lingo description>>
+
+! <<lingo sizes>>
+
+|<$link to="$:/plugins/unindented/hidesidebar/Database/breakpoint"><<lingo breakpoint>></$link> |<$edit-text tiddler="$:/plugins/unindented/hidesidebar/Database/breakpoint" default="" tag="input"/> |

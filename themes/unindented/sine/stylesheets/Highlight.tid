@@ -1,0 +1,91 @@
+title: $:/themes/unindented/sine/stylesheets/Highlight
+tags: $:/tags/Stylesheet
+
+\rules only filteredtranscludeinline transcludeinline macrocallinline
+
+.hljs {
+	background-color: <<colour pre-background>>;
+	border: 1px solid <<colour pre-border>>;
+	border-radius: 3px;
+  color: <<colour foreground>>;
+	font-family: {{$:/themes/tiddlywiki/vanilla/settings/codefontfamily}};
+	padding: 14px;
+}
+.hljs-code,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-subst,
+.hljs-template-tag {
+  color: <<colour foreground>>;
+  font-weight: normal;
+}
+.hljs-comment,
+.hljs-quote {
+  color: <<colour highlight-comment>>;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: <<colour highlight-keyword>>;
+  font-weight: bold;
+}
+.hljs-number,
+.hljs-literal,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-tag .hljs-attr {
+  color: <<colour highlight-number>>;
+}
+.hljs-doctag,
+.hljs-string {
+  color: <<colour highlight-string>>;
+}
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-title {
+  color: <<colour highlight-title>>;
+  font-weight: bold;
+}
+.hljs-type,
+.hljs-class .hljs-title {
+  color: <<colour highlight-type>>;
+  font-weight: bold;
+}
+.hljs-attribute,
+.hljs-name,
+.hljs-tag {
+  color: <<colour highlight-tag>>;
+  font-weight: normal;
+}
+.hljs-link,
+.hljs-regexp {
+  color: <<colour highlight-regexp>>;
+}
+.hljs-bullet,
+.hljs-symbol {
+  color: <<colour highlight-symbol>>;
+}
+.hljs-built_in,
+.hljs-builtin-name {
+  color: <<colour highlight-built-in>>;
+}
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-meta-string {
+  color: <<colour highlight-meta>>;
+  font-weight: bold;
+}
+.hljs-addition {
+  background: <<colour highlight-addition>>;
+}
+.hljs-deletion {
+  background: <<colour highlight-deletion>>;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}

@@ -1,0 +1,9 @@
+title: $:/themes/unindented/sine/Database/
+
+lightpalette: $:/themes/unindented/sine/palettes/Light
+darkpalette: $:/themes/unindented/sine/palettes/Dark
+
+maxfontsize: 19px
+maxbodyfontsize: 20px
+minscreensize: 480px
+maxscreensize: 1600px

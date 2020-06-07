@@ -1,0 +1,9 @@
+{
+  "title": "$:/plugins/unindented/chandler",
+  "name": "Chandler",
+  "description": "Chandler triage system",
+  "author": "Daniel Perez Alvarez",
+  "list": "readme usage",
+  "core-version": ">=5.1.0",
+  "plugin-type": "plugin"
+}

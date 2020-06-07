@@ -1,0 +1,7 @@
+title: $:/plugins/unindented/chandler/usage
+
+Call the `chandler` macro from any tiddler, passing the tag you want to use for filtering. For example:
+
+```
+<<chandler tag:"To Read">>
+```

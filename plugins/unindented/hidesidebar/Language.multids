@@ -1,0 +1,6 @@
+title: $:/language/unindented/hidesidebar/
+
+Config/caption: Hide Sidebar
+Config/description: Hide sidebar on startup if screen size is below breakpoint.
+Config/sizes: Sizes
+Config/breakpoint: Breakpoint

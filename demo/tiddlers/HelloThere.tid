@@ -1,0 +1,39 @@
+title: Hello There
+
+This is a demo site for my [[TiddlyWiki|https://tiddlywiki.com/]] plugins and themes.
+
+!! Sine Theme
+
+It's the theme you're seeing right now! You can toggle between light and dark palettes by clicking here:
+<span style="font-size: 1.2em;">{{$:/themes/unindented/sine/ui/Buttons/palette-switcher}}</span>
+
+To install, drag this into your ~TiddlyWiki:
+<span class="tc-tag-label tc-btn-invisible" style="cursor: move">
+<$draggable filter="$:/themes/unindented/sine $:/theme $:/palette">
+Sine Theme
+</$draggable>
+</span>
+
+!! Hide Sidebar Plugin
+
+This plugin automatically hides the sidebar on screens smaller than the configured breakpoint.
+
+To install, drag this into your ~TiddlyWiki:
+<span class="tc-tag-label tc-btn-invisible" style="cursor: move">
+<$draggable filter="$:/plugins/unindented/hidesidebar">
+Hide Sidebar
+</$draggable>
+</span>
+
+!! Chandler Plugin
+
+The Chandler system, as described by Joe Armstrong in his post [[Fun with the TiddlyWiki|https://joearms.github.io/#2018-12-26%20Fun%20with%20the%20TiddlyWiki]], is a triage system to manage lists of tasks that must be done now, later, or which were done.
+
+This plugin adds a macro to make it easy to triage tiddlers. You can see an example here: [[Books To Read]]
+
+To install, drag this into your ~TiddlyWiki:
+<span class="tc-tag-label tc-btn-invisible" style="cursor: move">
+<$draggable filter="$:/plugins/unindented/chandler">
+Chandler
+</$draggable>
+</span>

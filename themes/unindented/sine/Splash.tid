@@ -1,0 +1,60 @@
+title: $:/themes/unindented/sine/Splash
+tags: $:/tags/RawMarkupWikified/TopBody
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
+
+\define lingo-base() $:/language/unindented/sine/Splash/
+
+<div class="tc-remove-when-wiki-loaded">
+  <style>
+    html {
+      font-family: {{$:/themes/tiddlywiki/vanilla/settings/fontfamily}};
+      line-height: {{$:/themes/tiddlywiki/vanilla/metrics/lineheight}};
+      text-rendering: optimizeLegibility; /* Enables kerning and ligatures etc. */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    <<fluid-typography-global selector:"html">>
+
+    body.tc-body {
+      background-color: <<colour background>>;
+      color: <<colour foreground>>;
+      fill: <<colour foreground>>;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .tc-splash-text {
+      margin-top: 1em;
+    }
+
+    #un-splash {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 80vh;
+      justify-content: center;
+    }
+    #un-splash::before {
+      border: .25em solid transparent;
+      border-bottom-color: <<colour muted-foreground>>;
+      border-top-color: <<colour muted-foreground>>;
+      border-radius: 50%;
+      content: '';
+      height: 2em;
+      width: 2em;
+      animation: spinner 1s linear infinite;
+    }
+
+    @keyframes spinner {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <div id="un-splash">
+    <div class="tc-splash-text">
+      <<lingo text>>
+    </div>
+  </div>
+</div>

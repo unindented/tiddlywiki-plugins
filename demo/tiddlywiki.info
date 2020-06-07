@@ -1,0 +1,27 @@
+{
+  "description": "Demo site for my TiddlyWiki plugins and themes",
+  "plugins": [
+    "tiddlywiki/tiddlyweb",
+    "tiddlywiki/filesystem",
+    "tiddlywiki/highlight",
+    "unindented/chandler",
+    "unindented/hidesidebar"
+  ],
+  "themes": [
+    "tiddlywiki/vanilla",
+    "tiddlywiki/snowwhite",
+    "tiddlywiki/seamless",
+    "unindented/sine"
+  ],
+  "build": {
+    "index": [
+      "--rendertiddler", "$:/plugins/tiddlywiki/tiddlyweb/save/offline", "index.html", "text/plain"
+    ],
+    "static": [
+      "--rendertiddler", "$:/core/templates/static.template.html", "static.html", "text/plain",
+      "--rendertiddler", "$:/core/templates/alltiddlers.template.html", "alltiddlers.html", "text/plain",
+      "--rendertiddlers", "[!is[system]]", "$:/core/templates/static.tiddler.html", "static", "text/plain",
+      "--rendertiddler", "$:/core/templates/static.template.css", "static/static.css", "text/plain"
+    ]
+  }
+}

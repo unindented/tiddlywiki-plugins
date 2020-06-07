@@ -1,0 +1,276 @@
+title: $:/themes/unindented/sine/palettes/Dark
+name: Sine (Dark)
+description: Dark palette based on Mineral UI colors
+tags: $:/tags/Palette
+type: application/x-tiddler-dictionary
+
+palette-white: #ffffff
+palette-black: #1d1f24
+palette-blue-10: #f0f5fc
+palette-blue-20: #cfe0fc
+palette-blue-30: #accbfc
+palette-blue-40: #84b1fa
+palette-blue-50: #5691f0
+palette-blue-60: #3272d9
+palette-blue-70: #1d5bbf
+palette-blue-80: #114599
+palette-blue-90: #103570
+palette-blue-100: #15233b
+palette-bronze-10: #fcf2e6
+palette-bronze-20: #fad8af
+palette-bronze-30: #f5bc76
+palette-bronze-40: #e89c3f
+palette-bronze-50: #cf7911
+palette-bronze-60: #ad5f00
+palette-bronze-70: #8a4d03
+palette-bronze-80: #693d07
+palette-bronze-90: #4d2f0b
+palette-bronze-100: #33210c
+palette-dusk-10: #f4f2f7
+palette-dusk-20: #e3dcf7
+palette-dusk-30: #cec2f0
+palette-dusk-40: #b5a6e3
+palette-dusk-50: #9886cf
+palette-dusk-60: #7a68b3
+palette-dusk-70: #645396
+palette-dusk-80: #4f4178
+palette-dusk-90: #3a3154
+palette-dusk-100: #282436
+palette-gray-10: #f5f7fa
+palette-gray-20: #ebeff5
+palette-gray-30: #dde3ed
+palette-gray-40: #c8d1e0
+palette-gray-50: #afbacc
+palette-gray-60: #8e99ab
+palette-gray-70: #707a8a
+palette-gray-80: #58606e
+palette-gray-90: #434a54
+palette-gray-100: #333840
+palette-green-10: #e1faeb
+palette-green-20: #abedc5
+palette-green-30: #7ddba3
+palette-green-40: #57c282
+palette-green-50: #3ba164
+palette-green-60: #2a854e
+palette-green-70: #20693d
+palette-green-80: #1a5230
+palette-green-90: #153d25
+palette-green-100: #112b1b
+palette-indigo-10: #f2f2fc
+palette-indigo-20: #dcdcfc
+palette-indigo-30: #c2c2fc
+palette-indigo-40: #a7a7fa
+palette-indigo-50: #8585f2
+palette-indigo-60: #6767e6
+palette-indigo-70: #4d4dd1
+palette-indigo-80: #3737b3
+palette-indigo-90: #28288a
+palette-indigo-100: #202057
+palette-magenta-10: #faf0f4
+palette-magenta-20: #fad4e4
+palette-magenta-30: #fab4d1
+palette-magenta-40: #f78bb8
+palette-magenta-50: #ed5393
+palette-magenta-60: #d6246e
+palette-magenta-70: #b01355
+palette-magenta-80: #8a1244
+palette-magenta-90: #611535
+palette-magenta-100: #421527
+palette-purple-10: #f5f0fa
+palette-purple-20: #ead9fa
+palette-purple-30: #dabcf7
+palette-purple-40: #c79bf2
+palette-purple-50: #ae74e8
+palette-purple-60: #9656d6
+palette-purple-70: #7d3cbd
+palette-purple-80: #642b9e
+palette-purple-90: #4b2175
+palette-purple-100: #371c52
+palette-red-10: #faf0f0
+palette-red-20: #fad4d4
+palette-red-30: #fab6b6
+palette-red-40: #fa8e8e
+palette-red-50: #f55353
+palette-red-60: #de1b1b
+palette-red-70: #b80d0d
+palette-red-80: #8f0e0e
+palette-red-90: #661414
+palette-red-100: #451717
+palette-sky-10: #e8f4fa
+palette-sky-20: #bbe5fa
+palette-sky-30: #8dd4f7
+palette-sky-40: #53baed
+palette-sky-50: #229ad6
+palette-sky-60: #0c7bb3
+palette-sky-70: #066391
+palette-sky-80: #064d70
+palette-sky-90: #093952
+palette-sky-100: #0c2938
+palette-slate-10: #edf4f7
+palette-slate-20: #cbe3f5
+palette-slate-30: #a7ceeb
+palette-slate-40: #84b7db
+palette-slate-50: #5e95bd
+palette-slate-60: #48799c
+palette-slate-70: #376180
+palette-slate-80: #2d4d63
+palette-slate-90: #243947
+palette-slate-100: #1d2830
+palette-teal-10: #e4f7f6
+palette-teal-20: #a8ede9
+palette-teal-30: #6cd9d2
+palette-teal-40: #45bfb7
+palette-teal-50: #28a199
+palette-teal-60: #17827b
+palette-teal-70: #116963
+palette-teal-80: #0d524d
+palette-teal-90: #0b3d3a
+palette-teal-100: #092b29
+
+alert-background: <<colour palette-bronze-100>>
+alert-border: <<colour palette-bronze-70>>
+alert-highlight: <<colour palette-red-30>>
+alert-muted-foreground: <<colour palette-bronze-30>>
+background: <<colour palette-black>>
+blockquote-bar: <<colour muted-foreground>>
+button-background: linear-gradient(<<colour palette-gray-60>>, <<colour palette-gray-80>>)
+button-foreground: <<colour foreground>>
+button-border: <<colour muted-foreground>>
+code-background: <<colour page-background>>
+code-border: <<colour muted-foreground>>
+code-foreground: <<colour foreground>>
+diff-delete-background: <<colour palette-red-90>>
+diff-delete-foreground: <<colour foreground>>
+diff-equal-background:
+diff-equal-foreground: <<colour foreground>>
+diff-insert-background: <<colour palette-green-90>>
+diff-insert-foreground: <<colour foreground>>
+diff-invisible-background:
+diff-invisible-foreground: <<colour muted-foreground>>
+dirty-indicator: <<colour palette-red-30>>
+download-background: <<colour palette-green-40>>
+download-foreground: <<colour background>>
+dragger-background: <<colour foreground>>
+dragger-foreground: <<colour background>>
+dropdown-background: <<colour background>>
+dropdown-border: <<colour muted-foreground>>
+dropdown-tab-background-selected: <<colour tab-background-selected>>
+dropdown-tab-background: <<colour tab-background>>
+dropzone-background: <<colour palette-gray-70>>
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: inherit
+external-link-foreground-visited: <<colour palette-purple-30>>
+external-link-foreground: <<colour palette-blue-30>>
+foreground: <<colour palette-white>>
+message-background: <<colour page-background>>
+message-border: <<colour muted-foreground>>
+message-foreground: <<colour foreground>>
+modal-backdrop: <<colour foreground>>
+modal-background: <<colour background>>
+modal-border: <<colour muted-foreground>>
+modal-footer-background: <<colour page-background>>
+modal-footer-border: <<colour muted-foreground>>
+modal-header-border: <<colour muted-foreground>>
+muted-foreground: <<colour palette-gray-80>>
+notification-background: <<colour page-background>>
+notification-border: <<colour muted-foreground>>
+page-background: <<colour palette-gray-100>>
+pre-background: <<colour page-background>>
+pre-border: <<colour muted-foreground>>
+primary: <<colour palette-blue-30>>
+select-tag-background: linear-gradient(<<colour palette-gray-60>>, <<colour palette-gray-80>>)
+select-tag-foreground: <<colour foreground>>
+sidebar-button-foreground: <<colour foreground>>
+sidebar-controls-foreground-hover: <<colour tiddler-controls-foreground-hover>>
+sidebar-controls-foreground: <<colour tiddler-controls-foreground>>
+sidebar-foreground-shadow: <<colour palette-black>>
+sidebar-foreground: <<colour sidebar-controls-foreground>>
+sidebar-muted-foreground-hover: <<colour sidebar-controls-foreground-hover>>
+sidebar-muted-foreground: <<colour sidebar-controls-foreground>>
+sidebar-tab-background-selected: <<colour tab-background-selected>>
+sidebar-tab-background: <<colour tab-background>>
+sidebar-tab-border-selected: <<colour tab-border-selected>>
+sidebar-tab-border: <<colour tab-border>>
+sidebar-tab-divider: <<colour tab-divider>>
+sidebar-tab-foreground-selected: <<colour tab-foreground-selected>>
+sidebar-tab-foreground: <<colour tab-foreground>>
+sidebar-tiddler-link-foreground-hover: <<colour sidebar-controls-foreground-hover>>
+sidebar-tiddler-link-foreground: <<colour sidebar-controls-foreground-hover>>
+site-title-foreground: <<colour tiddler-title-foreground>>
+static-alert-foreground: <<colour palette-gray-50>>
+tab-background-selected: <<colour background>>
+tab-background: <<colour tab-border>>
+tab-border-selected: <<colour tab-border>>
+tab-border: <<colour muted-foreground>>
+tab-divider: <<colour tab-border>>
+tab-foreground-selected: <<colour tab-foreground>>
+tab-foreground: <<colour palette-gray-10>>
+table-border: <<colour muted-foreground>>
+table-footer-background: <<colour page-background>>
+table-header-background: <<colour page-background>>
+tag-background: <<colour palette-blue-40>>
+tag-foreground: <<colour palette-black>>
+tiddler-background: <<colour background>>
+tiddler-border: transparent
+tiddler-controls-foreground-hover: <<colour palette-gray-30>>
+tiddler-controls-foreground-selected: <<colour palette-gray-10>>
+tiddler-controls-foreground: <<colour palette-gray-50>>
+tiddler-editor-background: <<colour page-background>>
+tiddler-editor-border-image: transparent
+tiddler-editor-border: <<colour muted-foreground>>
+tiddler-editor-fields-even: <<colour palette-gray-90>>
+tiddler-editor-fields-odd: <<colour palette-gray-100>>
+tiddler-info-background: <<colour background>>
+tiddler-info-border: <<colour muted-foreground>>
+tiddler-info-tab-background: <<colour tiddler-info-background>>
+tiddler-link-background: <<colour background>>
+tiddler-link-foreground: <<colour primary>>
+tiddler-subtitle-foreground: <<colour palette-gray-50>>
+tiddler-title-foreground: <<colour palette-gray-10>>
+toolbar-new-button:
+toolbar-options-button:
+toolbar-save-button:
+toolbar-info-button:
+toolbar-edit-button:
+toolbar-close-button:
+toolbar-delete-button:
+toolbar-cancel-button:
+toolbar-done-button:
+untagged-background: <<colour palette-gray-40>>
+very-muted-foreground: <<colour palette-gray-50>>
+wikilist-background: <<colour background>>
+wikilist-item: <<colour background>>
+wikilist-info: <<colour foreground>>
+wikilist-title: <<colour tiddler-title-foreground>>
+wikilist-title-svg: <<colour wikilist-title>>
+wikilist-url: <<colour tiddler-subtitle-foreground>>
+wikilist-button-open: <<colour palette-green-80>>
+wikilist-button-open-hover: <<colour palette-green-70>>
+wikilist-button-reveal: <<colour palette-blue-80>>
+wikilist-button-reveal-hover: <<colour palette-blue-70>>
+wikilist-button-remove: <<colour palette-red-80>>
+wikilist-button-remove-hover: <<colour palette-red-70>>
+wikilist-toolbar-background: <<colour page-background>>
+wikilist-toolbar-foreground: <<colour foreground>>
+wikilist-droplink-dragover: <<colour palette-gray-70>>
+wikilist-button-background: <<colour palette-gray-70>>
+wikilist-button-foreground: <<colour foreground>>
+
+jumbotron-background-1: <<colour palette-blue-30>>
+jumbotron-background-2: <<colour palette-purple-40>>
+
+highlight-comment: <<colour palette-gray-40>>
+highlight-meta: <<colour palette-gray-40>>
+highlight-keyword: <<colour palette-gray-10>>
+highlight-tag: <<colour palette-blue-20>>
+highlight-title: <<colour palette-red-30>>
+highlight-type: <<colour palette-sky-30>>
+highlight-built-in: <<colour palette-teal-40>>
+highlight-number: <<colour palette-sky-40>>
+highlight-regexp: <<colour palette-green-40>>
+highlight-string: <<colour palette-red-40>>
+highlight-symbol: <<colour palette-magenta-40>>
+highlight-addition: <<colour palette-green-60>>
+highlight-deletion: <<colour palette-red-60>>

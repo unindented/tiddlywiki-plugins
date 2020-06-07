@@ -1,0 +1,109 @@
+title: $:/plugins/unindented/chandler/Macros
+tags: $:/tags/Macro
+
+\define lingo-base() $:/language/unindented/chandler/
+
+\define chandler-button-Now(tag)
+\whitespace trim
+<$button>
+  <$action-sendmessage $message="tm-new-tiddler" tags="[[$tag$]] Now"/>
+  <<lingo Buttons/AddNow/text>>
+</$button>
+\end
+
+\define chandler-button-Later(tag)
+\whitespace trim
+<$button>
+  <$action-sendmessage $message="tm-new-tiddler" tags="[[$tag$]] Later"/>
+  <<lingo Buttons/AddLater/text>>
+</$button>
+\end
+
+\define chandler-buttons(tag)
+\whitespace trim
+<<chandler-button-Now tag:"$tag$">><$text text=" "/><<chandler-button-Later tag:"$tag$">>
+\end
+
+\define chandler-action-Now()
+\whitespace trim
+<$button tooltip={{$:/language/unindented/chandler/Buttons/Now/tooltip}} aria-label={{$:/language/unindented/chandler/Buttons/Now/label}}>
+  <$action-sendmessage $message="tm-add-tag" $param="Now"/>
+  <$action-sendmessage $message="tm-remove-tag" $param="Later"/>
+  <$action-sendmessage $message="tm-remove-tag" $param="Done"/>
+  {{$:/core/images/timestamp-on}}
+</$button>
+\end
+
+\define chandler-action-Later()
+\whitespace trim
+<$button tooltip={{$:/language/unindented/chandler/Buttons/Later/tooltip}} aria-label={{$:/language/unindented/chandler/Buttons/Later/label}}>
+  <$action-sendmessage $message="tm-remove-tag" $param="Now"/>
+  <$action-sendmessage $message="tm-add-tag" $param="Later"/>
+  <$action-sendmessage $message="tm-remove-tag" $param="Done"/>
+  {{$:/core/images/timestamp-off}}
+</$button>
+\end
+
+\define chandler-action-Done()
+\whitespace trim
+<$button tooltip={{$:/language/unindented/chandler/Buttons/Done/tooltip}} aria-label={{$:/language/unindented/chandler/Buttons/Done/label}}>
+  <$action-sendmessage $message="tm-remove-tag" $param="Now"/>
+  <$action-sendmessage $message="tm-remove-tag" $param="Later"/>
+  <$action-sendmessage $message="tm-add-tag" $param="Done"/>
+  {{$:/core/images/done-button}}
+</$button>
+\end
+
+\define chandler-actions-Now()
+\whitespace trim
+  <<chandler-action-Later>>
+  <<chandler-action-Done>>
+\end
+
+\define chandler-actions-Later()
+\whitespace trim
+  <<chandler-action-Now>>
+  <<chandler-action-Done>>
+\end
+
+\define chandler-actions-Done()
+\whitespace trim
+  <<chandler-action-Now>>
+  <<chandler-action-Later>>
+\end
+
+\define chandler-list(tag,state,filter:"sort[created]",type:"ul",subtype:"li",class:"",emptyMessage:"<li>//<<lingo Lists/Empty/message>>//</li>")
+\whitespace trim
+<$type$ class="$class$">
+  <$list filter="[tag[$tag$]tag[$state$]$filter$]" emptyMessage=<<__emptyMessage__>>>
+    <$subtype$>
+      <$fieldmangler>
+        <$macrocall $name="chandler-actions-$state$"/>
+      </$fieldmangler>
+      <$text text=" "/>
+      <$link to={{!!title}}>
+        <$transclude field="caption">
+          <$view field="title"/>
+        </$transclude>
+      </$link>
+    </$subtype$>
+  </$list>
+</$type$>
+\end
+
+\define chandler(tag,nowFilter:"sort[created]",laterFilter:"sort[created]",doneFilter:"has[modified]!sort[modified]limit[10]")
+\whitespace trim
+<<chandler-buttons tag:"$tag$">>
+
+!! <<lingo Lists/Now/title>>
+
+<<chandler-list tag:"$tag$" state:"Now" filter:"$nowFilter$">>
+
+!! <<lingo Lists/Later/title>>
+
+<<chandler-list tag:"$tag$" state:"Later" filter:"$laterFilter$">>
+
+!! <<lingo Lists/Done/title>>
+
+<<chandler-list tag:"$tag$" state:"Done" filter:"$doneFilter$">>
+\end

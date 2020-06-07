@@ -1,0 +1,45 @@
+title: $:/themes/unindented/sine/Macros
+tags: $:/tags/Macro
+
+\define fluid-typography(selector)
+$selector$ {
+  font-size: <<minfontsize>>;
+}
+
+@media (min-width: <<minscreensize>>) {
+  $selector$ {
+    font-size: calc(
+      <<minfontsize>> +
+        (<$text text={{{ [<maxfontsize>add[0]] }}}/> - <$text text={{{ [<minfontsize>add[0]] }}}/>) *
+        (100vw - <<minscreensize>>) /
+        (<$text text={{{ [<maxscreensize>add[0]] }}}/> - <$text text={{{ [<minscreensize>add[0]] }}}/>)
+    );
+  }
+}
+
+@media (min-width: <<maxscreensize>>) {
+  $selector$ {
+    font-size: <<maxfontsize>>;
+  }
+}
+\end
+
+\define fluid-typography-global(selector)
+<$vars
+  minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/fontsize}}
+  maxfontsize={{$:/themes/unindented/sine/Database/maxfontsize}}
+  minscreensize={{$:/themes/unindented/sine/Database/minscreensize}}
+  maxscreensize={{$:/themes/unindented/sine/Database/maxscreensize}}>
+<<fluid-typography selector:"$selector$">>
+</$vars>
+\end
+
+\define fluid-typography-body(selector)
+<$vars
+  minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize}}
+  maxfontsize={{$:/themes/unindented/sine/Database/maxbodyfontsize}}
+  minscreensize={{$:/themes/unindented/sine/Database/minscreensize}}
+  maxscreensize={{$:/themes/unindented/sine/Database/maxscreensize}}>
+<<fluid-typography selector:"$selector$">>
+</$vars>
+\end

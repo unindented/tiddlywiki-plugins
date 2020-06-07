@@ -1,0 +1,3 @@
+title: $:/plugins/unindented/chandler/readme
+
+Plugin that implements the Chandler triage system described by Joe Armstrong in his blog post [[Fun with the TiddlyWiki|https://joearms.github.io/#2018-12-26%20Fun%20with%20the%20TiddlyWiki]].

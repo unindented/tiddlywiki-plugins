@@ -1,0 +1,15 @@
+title: $:/language/unindented/chandler/
+
+Buttons/AddNow/text: Add Now
+Buttons/AddLater/text: Add Later
+Buttons/Now/tooltip: Do now
+Buttons/Now/label: do now
+Buttons/Later/tooltip: Do later
+Buttons/Later/label: do later
+Buttons/Done/tooltip: Mark as done
+Buttons/Done/label: mark as done
+
+Lists/Empty/message: Nothing
+Lists/Now/title: Now
+Lists/Later/title: Later
+Lists/Done/title: Done

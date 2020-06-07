@@ -1,0 +1,28 @@
+title: $:/themes/unindented/sine/ui/PageTemplate/jumbotron
+tags: $:/tags/PageTemplate
+list-before: $:/core/ui/PageTemplate/sidebar
+
+\whitespace trim
+<header class="tc-jumbotron">
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/Jumbotron]!has[draft.of]]" variable="listItem" storyview="pop">
+
+  <$transclude tiddler=<<listItem>> mode="inline"/>
+
+</$list>
+
+<svg height="0" width="0">
+
+  <defs>
+
+    <clipPath id="jumbotron-clip" clipPathUnits="objectBoundingBox">
+
+      <path d="M 0 .5 L 0 1 L 1 1 L 1 .5 Q .83 1.33, .66 .5 T .33 .5 T 0 .5 Z" />
+
+    </clipPath>
+
+  </defs>
+
+</svg>
+
+</header>

@@ -1,0 +1,4 @@
+title: $:/config/
+
+AnimationDuration: 200
+Navigation/UpdateAddressBar: permalink

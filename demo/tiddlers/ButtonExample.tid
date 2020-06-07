@@ -1,0 +1,7 @@
+title: Button Example
+created: 20200613221018133
+modified: 20200613221020853
+
+A `ButtonWidget` example:
+
+<$button class="tc-btn-big-green">Download Something {{$:/core/images/save-button}}</$button>

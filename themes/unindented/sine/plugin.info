@@ -1,0 +1,11 @@
+{
+  "title": "$:/themes/unindented/sine",
+  "name": "Sine",
+  "description": "Theme with fluid typography, and light and dark palettes",
+  "author": "Daniel Perez Alvarez",
+  "core-version": ">=5.1.0",
+  "plugin-type": "theme",
+  "dependents": [
+    "$:/themes/tiddlywiki/vanilla"
+  ]
+}
