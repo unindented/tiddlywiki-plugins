@@ -88,8 +88,8 @@ html {
 }
 body.tc-body {
       background-color: #ffffff;
-      color: #333333;
-      fill: #333333;
+      color: #1d1f24;
+      fill: #1d1f24;
       font-size: inherit;
       line-height: inherit;
     }.tc-splash-text {
@@ -103,8 +103,8 @@ body.tc-body {
     }
     .splash::before {
       border: .25em solid transparent;
-      border-bottom-color: #bbb;
-      border-top-color: #bbb;
+      border-bottom-color: #dde3ed;
+      border-top-color: #dde3ed;
       border-radius: 50%;
       content: '';
       height: 2em;
@@ -204,7 +204,7 @@ Error message and password prompt
 
 <li>$:/config/AnimationDuration</li>
 
-<li>$:/config/Navigation/UpdateHistory</li>
+<li>$:/config/Navigation/UpdateAddressBar</li>
 
 <li>$:/core</li>
 
@@ -236,7 +236,13 @@ Error message and password prompt
 
 <li>$:/themes/unindented/sine</li>
 
-<li>Chandler Example</li>
+<li>Books To Read</li>
+
+<li>Button Example</li>
+
+<li>Code Example</li>
+
+<li>Diff Example</li>
 
 <li>Hello There</li>
 
@@ -261,8 +267,8 @@ Error message and password prompt
 <div title="$:/config/AnimationDuration" revision="0" bag="default">
 <pre>200</pre>
 </div>
-<div title="$:/config/Navigation/UpdateHistory" revision="0" bag="default">
-<pre>yes</pre>
+<div title="$:/config/Navigation/UpdateAddressBar" revision="0" bag="default">
+<pre>permalink</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22" revision="0" bag="default">
 <pre>{
@@ -9638,8 +9644,7 @@ Error message and password prompt
 }</pre>
 </div>
 <div title="$:/DefaultTiddlers" revision="0" bag="default">
-<pre>[[Hello There]]
-[[Chandler Example]]</pre>
+<pre>[[Hello There]]</pre>
 </div>
 <div title="$:/isEncrypted" revision="0" bag="default">
 <pre>no</pre>
@@ -9745,7 +9750,7 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange" revision="0" bag="default">
 <pre>no</pre>
 </div>
-<div list="[[Hello There]] [[Chandler Example]]" title="$:/StoryList" revision="1" bag="default">
+<div list="[[Hello There]]" title="$:/StoryList" revision="1" bag="default">
 <pre></pre>
 </div>
 <div title="$:/theme" revision="0" bag="default">
@@ -9893,7 +9898,7 @@ Error message and password prompt
         &quot;$:/themes/unindented/sine/Stylesheet&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/Stylesheet&quot;,
             &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n&lt;&lt;fluid-typography selector:\&quot;html\&quot;&gt;&gt;\n\nbody.tc-body,\nbody.tc-body .tc-tiddler-frame .tc-tiddler-body {\n  font-size: inherit;\n}\n\n/* Adjusted from Seamless theme */\nhtml body.tc-body {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nhtml:-webkit-full-screen {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-tiddler-frame {\n  border: 0;\n  padding: 0 14px;\n  margin-bottom: 58px;\n}\n\n/* Give a bit more space to title icons */\nbody.tc-body .tc-tiddler-title-icon {\n  margin-right: 10px;\n}\n\n/* Increase size of title icons */\nbody.tc-body .tc-tiddler-title-icon svg {\n  height: .9em;\n  width: 1em;\n}\n\n/* Hide empty title icons so that title aligns with body */\nbody.tc-body .tc-tiddler-title-icon:empty {\n  display: none;\n}\n\n/* Reposition top bar elements */\nbody.tc-body .tc-topbar-left {\n  top: 5px;\n  left: 5px;\n}\nbody.tc-body .tc-topbar-right {\n  top: 5px;\n  right: 5px;\n}\n\n/* Align page control buttons with tiddler control buttons */\nbody.tc-body .tc-page-controls {\n  font-size: 2.35em;\n  line-height: 1.2em;\n  margin-top: calc(-1em / 2.35);\n}\nbody.tc-body .tc-page-controls button {\n  margin-right: 5px;\n}\nbody.tc-body .tc-page-controls button svg.tc-image-button,\nbody.tc-body .tc-page-controls button .tc-image-button img {\n  height: .75em;\n}\n\n/* Fix alignment of search dropdown */\nbody.tc-body .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n}\n\n/* Let menu list items wrap normally */\nbody.tc-body .tc-menu-list-item {\n  white-space: normal;\n}\n\n/* Reset the font weight for these things */\nh1, h2, h3, h4, h5, h6,\nbody.tc-body a.tc-tiddlylink,\nbody.tc-body button.tc-tiddlylink {\n  font-weight: 400;\n}\n\n@media (hover: hover) {\n\n  /* Hide tiddler controls until hover */\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {\n    opacity: 0;\n\t  &lt;&lt;transition \&quot;opacity 150ms ease-in-out\&quot;&gt;&gt;\n  }\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$=\&quot;%2Fcore%2Fui%2FButtons%2Fclose\&quot;],\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {\n    opacity: 1;\n  }\n\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n  /* Adjusted from Seamless theme */\n  body.tc-body .tc-tiddler-frame {\n    padding: 0;\n  }\n  body.tc-body .tc-tiddler-info {\n    margin: 0;\n  }\n  body.tc-body .tc-message-box {\n    margin: 21px 0 21px 0;\n  }\n\n  /* Align page control buttons with tiddler control buttons */\n  body.tc-body .tc-sidebar-scrollable {\n    padding: 42px 0 28px 42px;\n  }\n  body.tc-body .tc-sidebar-header {\n    padding: 0;\n  }\n\n}\n&quot;
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n&lt;&lt;fluid-typography selector:\&quot;html\&quot;&gt;&gt;\n\nbody.tc-body,\nbody.tc-body .tc-tiddler-frame .tc-tiddler-body {\n  font-size: inherit;\n}\n\n/* Adjusted from Seamless theme */\nhtml body.tc-body {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nhtml:-webkit-full-screen {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-tiddler-frame {\n  border: 0;\n  padding: 0 14px;\n  margin-bottom: 58px;\n}\nbody.tc-body .tc-tiddler-info {\n  border: 0;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n/* Give a bit more space to title icons */\nbody.tc-body .tc-tiddler-title-icon {\n  margin-right: 10px;\n}\n\n/* Increase size of title icons */\nbody.tc-body .tc-tiddler-title-icon svg {\n  height: .9em;\n  width: 1em;\n}\n\n/* Hide empty title icons so that title aligns with body */\nbody.tc-body .tc-tiddler-title-icon:empty {\n  display: none;\n}\n\n/* Reposition top bar elements */\nbody.tc-body .tc-topbar-left {\n  top: 5px;\n  left: 5px;\n}\nbody.tc-body .tc-topbar-right {\n  top: 5px;\n  right: 5px;\n}\n\n/* Align page control buttons with tiddler control buttons */\nbody.tc-body .tc-page-controls {\n  font-size: 2.35em;\n  line-height: 1.2em;\n  margin-top: calc(-1em / 2.35);\n}\nbody.tc-body .tc-page-controls button {\n  margin-right: 5px;\n}\nbody.tc-body .tc-page-controls button svg.tc-image-button,\nbody.tc-body .tc-page-controls button .tc-image-button img {\n  height: .75em;\n}\n\n/* Fix alignment of search dropdown */\nbody.tc-body .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n}\n\n/* Let menu list items wrap normally */\nbody.tc-body .tc-menu-list-item {\n  white-space: normal;\n}\n\n/* Change the vertical alignment of the menu list mini buttons */\nbody.tc-body .tc-sidebar-lists button.tc-btn-mini {\n  vertical-align: text-bottom;\n}\n\n/* Change the color of the menu list mini buttons */\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini:hover svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground-hover&gt;&gt;;\n}\n\n/* Increase padding of menu list subitems */\nbody.tc-body .tc-menu-list-subitem {\n  padding-left: 14px;\n}\n\nbody.tc-body .tc-remove-tag-button {\n  fill: &lt;&lt;colour tag-foreground&gt;&gt;;\n}\n\n/* Increase padding for draft indicators */\nbody.tc-body .tc-drafts-list a {\n  padding: 14px;\n}\n\n/* Reset the font weight for these things */\nh1, h2, h3, h4, h5, h6,\nbody.tc-body a.tc-tiddlylink,\nbody.tc-body button.tc-tiddlylink {\n  font-weight: 400;\n}\n\n/* Add indicator to external links */\nbody.tc-body .tc-tiddlylink-external::after {\n  content: ' ↗';\n}\n\n/* Uniformize backgrounds and borders */\nhtml button,\nselect {\n  border: 1px solid &lt;&lt;colour button-border&gt;&gt;;\n}\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]) {\n\tbackground-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour tiddler-editor-border&gt;&gt;;\n}\nhtml button,\nselect,\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]),\n.tc-drop-down {\n  border-radius: 2px;\n}\n.tc-alert,\n.tc-notification {\n  border-radius: 6px;\n}\n\n/* Fix padding of some blocks */\nblockquote {\n  padding-left: 0;\n}\npre {\n  padding: 14px;\n}\n\n@media (hover: hover) {\n\n  /* Hide tiddler controls until hover */\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {\n    opacity: 0;\n    &lt;&lt;transition \&quot;opacity 150ms ease-in-out\&quot;&gt;&gt;\n  }\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$=\&quot;%2Fcore%2Fui%2FButtons%2Fclose\&quot;],\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {\n    opacity: 1;\n  }\n\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n  /* Adjusted from Seamless theme */\n  body.tc-body .tc-tiddler-frame {\n    padding: 0;\n  }\n  body.tc-body .tc-tiddler-info {\n    margin: 0;\n  }\n  body.tc-body .tc-message-box {\n    margin: 21px 0 21px 0;\n  }\n\n  /* Align page control buttons with tiddler control buttons */\n  body.tc-body .tc-sidebar-scrollable {\n    padding: 42px 0 28px 42px;\n  }\n  body.tc-body .tc-sidebar-header {\n    padding: 0;\n  }\n\n}\n&quot;
         },
         &quot;$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-title&quot;: {
             &quot;title&quot;: &quot;$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-title&quot;,
@@ -9938,18 +9943,18 @@ Error message and password prompt
         &quot;$:/themes/unindented/sine/palettes/Dark&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/palettes/Dark&quot;,
             &quot;name&quot;: &quot;Sine (Dark)&quot;,
-            &quot;description&quot;: &quot;My own dark palette&quot;,
+            &quot;description&quot;: &quot;Dark palette based on Mineral UI colors&quot;,
             &quot;tags&quot;: &quot;$:/tags/Palette&quot;,
             &quot;type&quot;: &quot;application/x-tiddler-dictionary&quot;,
-            &quot;text&quot;: &quot;palette-white: #ffffff\npalette-black: #1d1f24\npalette-blue-10: #f0f5fc\npalette-blue-20: #cfe0fc\npalette-blue-30: #accbfc\npalette-blue-40: #84b1fa\npalette-blue-50: #5691f0\npalette-blue-60: #3272d9\npalette-blue-70: #1d5bbf\npalette-blue-80: #114599\npalette-blue-90: #103570\npalette-blue-100: #15233b\npalette-bronze-10: #fcf2e6\npalette-bronze-20: #fad8af\npalette-bronze-30: #f5bc76\npalette-bronze-40: #e89c3f\npalette-bronze-50: #cf7911\npalette-bronze-60: #ad5f00\npalette-bronze-70: #8a4d03\npalette-bronze-80: #693d07\npalette-bronze-90: #4d2f0b\npalette-bronze-100: #33210c\npalette-dusk-10: #f4f2f7\npalette-dusk-20: #e3dcf7\npalette-dusk-30: #cec2f0\npalette-dusk-40: #b5a6e3\npalette-dusk-50: #9886cf\npalette-dusk-60: #7a68b3\npalette-dusk-70: #645396\npalette-dusk-80: #4f4178\npalette-dusk-90: #3a3154\npalette-dusk-100: #282436\npalette-gray-10: #f5f7fa\npalette-gray-20: #ebeff5\npalette-gray-30: #dde3ed\npalette-gray-40: #c8d1e0\npalette-gray-50: #afbacc\npalette-gray-60: #8e99ab\npalette-gray-70: #707a8a\npalette-gray-80: #58606e\npalette-gray-90: #434a54\npalette-gray-100: #333840\npalette-green-10: #e1faeb\npalette-green-20: #abedc5\npalette-green-30: #7ddba3\npalette-green-40: #57c282\npalette-green-50: #3ba164\npalette-green-60: #2a854e\npalette-green-70: #20693d\npalette-green-80: #1a5230\npalette-green-90: #153d25\npalette-green-100: #112b1b\npalette-indigo-10: #f2f2fc\npalette-indigo-20: #dcdcfc\npalette-indigo-30: #c2c2fc\npalette-indigo-40: #a7a7fa\npalette-indigo-50: #8585f2\npalette-indigo-60: #6767e6\npalette-indigo-70: #4d4dd1\npalette-indigo-80: #3737b3\npalette-indigo-90: #28288a\npalette-indigo-100: #202057\npalette-magenta-10: #faf0f4\npalette-magenta-20: #fad4e4\npalette-magenta-30: #fab4d1\npalette-magenta-40: #f78bb8\npalette-magenta-50: #ed5393\npalette-magenta-60: #d6246e\npalette-magenta-70: #b01355\npalette-magenta-80: #8a1244\npalette-magenta-90: #611535\npalette-magenta-100: #421527\npalette-purple-10: #f5f0fa\npalette-purple-20: #ead9fa\npalette-purple-30: #dabcf7\npalette-purple-40: #c79bf2\npalette-purple-50: #ae74e8\npalette-purple-60: #9656d6\npalette-purple-70: #7d3cbd\npalette-purple-80: #642b9e\npalette-purple-90: #4b2175\npalette-purple-100: #371c52\npalette-red-10: #faf0f0\npalette-red-20: #fad4d4\npalette-red-30: #fab6b6\npalette-red-40: #fa8e8e\npalette-red-50: #f55353\npalette-red-60: #de1b1b\npalette-red-70: #b80d0d\npalette-red-80: #8f0e0e\npalette-red-90: #661414\npalette-red-100: #451717\npalette-sky-10: #e8f4fa\npalette-sky-20: #bbe5fa\npalette-sky-30: #8dd4f7\npalette-sky-40: #53baed\npalette-sky-50: #229ad6\npalette-sky-60: #0c7bb3\npalette-sky-70: #066391\npalette-sky-80: #064d70\npalette-sky-90: #093952\npalette-sky-100: #0c2938\npalette-slate-10: #edf4f7\npalette-slate-20: #cbe3f5\npalette-slate-30: #a7ceeb\npalette-slate-40: #84b7db\npalette-slate-50: #5e95bd\npalette-slate-60: #48799c\npalette-slate-70: #376180\npalette-slate-80: #2d4d63\npalette-slate-90: #243947\npalette-slate-100: #1d2830\npalette-teal-10: #e4f7f6\npalette-teal-20: #a8ede9\npalette-teal-30: #6cd9d2\npalette-teal-40: #45bfb7\npalette-teal-50: #28a199\npalette-teal-60: #17827b\npalette-teal-70: #116963\npalette-teal-80: #0d524d\npalette-teal-90: #0b3d3a\npalette-teal-100: #092b29\n\nalert-background: &lt;&lt;colour background&gt;&gt;\nalert-border: &lt;&lt;colour very-muted-foreground&gt;&gt;\nalert-highlight: &lt;&lt;colour very-muted-foreground&gt;&gt;\nalert-muted-foreground: &lt;&lt;colour muted-foreground&gt;&gt;\nbackground: &lt;&lt;colour palette-black&gt;&gt;\nblockquote-bar: &lt;&lt;colour page-background&gt;&gt;\nbutton-background: transparent\nbutton-foreground: inherit\nbutton-border: &lt;&lt;colour table-border&gt;&gt;\ncode-background: &lt;&lt;colour pre-background&gt;&gt;\ncode-border: &lt;&lt;colour pre-border&gt;&gt;\ncode-foreground: rgba(255, 255, 255, 0.54)\ndirty-indicator: #c80000\ndownload-background: &lt;&lt;colour primary&gt;&gt;\ndownload-foreground: &lt;&lt;colour foreground&gt;&gt;\ndragger-background: &lt;&lt;colour foreground&gt;&gt;\ndragger-foreground: &lt;&lt;colour background&gt;&gt;\ndropdown-background: #424242\ndropdown-border: &lt;&lt;colour dropdown-background&gt;&gt;\ndropdown-tab-background-selected: &lt;&lt;colour dropdown-background&gt;&gt;\ndropdown-tab-background: #050505\ndropzone-background: &lt;&lt;colour tag-background&gt;&gt;\nexternal-link-background-hover: transparent\nexternal-link-background-visited: transparent\nexternal-link-background: transparent\nexternal-link-foreground-hover: \nexternal-link-foreground-visited: #7c318c\nexternal-link-foreground: #9e3eb3\nforeground: &lt;&lt;colour palette-white&gt;&gt;\nmessage-background: &lt;&lt;colour background&gt;&gt;\nmessage-border: &lt;&lt;colour very-muted-foreground&gt;&gt;\nmessage-foreground: &lt;&lt;colour palette-white&gt;&gt;\nmodal-backdrop: &lt;&lt;colour page-background&gt;&gt;\nmodal-background: &lt;&lt;colour background&gt;&gt;\nmodal-border: &lt;&lt;colour very-muted-foreground&gt;&gt;\nmodal-footer-background: &lt;&lt;colour background&gt;&gt;\nmodal-footer-border: &lt;&lt;colour background&gt;&gt;\nmodal-header-border: &lt;&lt;colour very-muted-foreground&gt;&gt;\nmuted-foreground: rgba(255, 255, 255, 0.54)\nnotification-background: &lt;&lt;colour dropdown-background&gt;&gt;\nnotification-border: &lt;&lt;colour dropdown-background&gt;&gt;\npage-background: &lt;&lt;colour palette-teal-20&gt;&gt;\npre-background: #2a2a2a\npre-border: transparent\nprimary: &lt;&lt;colour palette-blue-20&gt;&gt;\nselect-tag-background: &lt;&lt;colour background&gt;&gt;\nselect-tag-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-controls-foreground-hover: #494949\nsidebar-controls-foreground: #5d5d5d\nsidebar-foreground-shadow: transparent\nsidebar-foreground: rgba(255, 255, 255, 0.54)\nsidebar-muted-foreground-hover: rgba(255, 255, 255, 0.54)\nsidebar-muted-foreground: rgba(255, 255, 255, 0.38)\nsidebar-tab-background-selected: &lt;&lt;colour page-background&gt;&gt;\nsidebar-tab-background: transparent\nsidebar-tab-border-selected: &lt;&lt;colour table-border&gt;&gt;\nsidebar-tab-border: transparent\nsidebar-tab-divider: &lt;&lt;colour table-border&gt;&gt;\nsidebar-tab-foreground-selected: rgba(255, 255, 255, 0.87)\nsidebar-tab-foreground: rgba(255, 255, 255, 0.54)\nsidebar-tiddler-link-foreground-hover: rgba(255, 255, 255, 0.7)\nsidebar-tiddler-link-foreground: rgba(255, 255, 255, 0.54)\nsite-title-foreground: rgba(255, 255, 255, 0.7)\nstatic-alert-foreground: #aaaaaa\ntab-background-selected: &lt;&lt;colour background&gt;&gt;\ntab-background: transparent\ntab-border-selected: &lt;&lt;colour table-border&gt;&gt;\ntab-border: transparent\ntab-divider: &lt;&lt;colour table-border&gt;&gt;\ntab-foreground-selected: rgba(255, 255, 255, 0.87)\ntab-foreground: rgba(255, 255, 255, 0.54)\ntable-border: #3a3a3a\ntable-footer-background: &lt;&lt;colour tiddler-editor-fields-odd&gt;&gt;\ntable-header-background: &lt;&lt;colour tiddler-editor-fields-even&gt;&gt;\ntag-background: #ec6\ntag-foreground: &lt;&lt;colour button-foreground&gt;&gt;\ntiddler-background: &lt;&lt;colour background&gt;&gt;\ntiddler-border: rgb(55,55,55)\ntiddler-controls-foreground-hover: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\ntiddler-controls-foreground-selected: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\ntiddler-controls-foreground: &lt;&lt;colour sidebar-controls-foreground&gt;&gt;\ntiddler-editor-background: transparent\ntiddler-editor-border-image: \ntiddler-editor-border: rgba(255, 255, 255, 0.08)\ntiddler-editor-fields-even: rgba(255, 255, 255, 0.1)\ntiddler-editor-fields-odd: rgba(255, 255, 255, 0.04)\ntiddler-info-background: #454545\ntiddler-info-border: #454545\ntiddler-info-tab-background: &lt;&lt;colour tiddler-editor-fields-odd&gt;&gt;\ntiddler-link-background: &lt;&lt;colour background&gt;&gt;\ntiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;\ntiddler-subtitle-foreground: &lt;&lt;colour muted-foreground&gt;&gt;\ntiddler-title-foreground: #FFFFFF\ntoolbar-new-button: \ntoolbar-options-button: \ntoolbar-save-button: \ntoolbar-info-button: \ntoolbar-edit-button: \ntoolbar-close-button: \ntoolbar-delete-button: \ntoolbar-cancel-button: \ntoolbar-done-button: \nuntagged-background: &lt;&lt;colour very-muted-foreground&gt;&gt;\nvery-muted-foreground: rgba(255, 255, 255, 0.12)&quot;
+            &quot;text&quot;: &quot;palette-white: #ffffff\npalette-black: #1d1f24\npalette-blue-10: #f0f5fc\npalette-blue-20: #cfe0fc\npalette-blue-30: #accbfc\npalette-blue-40: #84b1fa\npalette-blue-50: #5691f0\npalette-blue-60: #3272d9\npalette-blue-70: #1d5bbf\npalette-blue-80: #114599\npalette-blue-90: #103570\npalette-blue-100: #15233b\npalette-bronze-10: #fcf2e6\npalette-bronze-20: #fad8af\npalette-bronze-30: #f5bc76\npalette-bronze-40: #e89c3f\npalette-bronze-50: #cf7911\npalette-bronze-60: #ad5f00\npalette-bronze-70: #8a4d03\npalette-bronze-80: #693d07\npalette-bronze-90: #4d2f0b\npalette-bronze-100: #33210c\npalette-dusk-10: #f4f2f7\npalette-dusk-20: #e3dcf7\npalette-dusk-30: #cec2f0\npalette-dusk-40: #b5a6e3\npalette-dusk-50: #9886cf\npalette-dusk-60: #7a68b3\npalette-dusk-70: #645396\npalette-dusk-80: #4f4178\npalette-dusk-90: #3a3154\npalette-dusk-100: #282436\npalette-gray-10: #f5f7fa\npalette-gray-20: #ebeff5\npalette-gray-30: #dde3ed\npalette-gray-40: #c8d1e0\npalette-gray-50: #afbacc\npalette-gray-60: #8e99ab\npalette-gray-70: #707a8a\npalette-gray-80: #58606e\npalette-gray-90: #434a54\npalette-gray-100: #333840\npalette-green-10: #e1faeb\npalette-green-20: #abedc5\npalette-green-30: #7ddba3\npalette-green-40: #57c282\npalette-green-50: #3ba164\npalette-green-60: #2a854e\npalette-green-70: #20693d\npalette-green-80: #1a5230\npalette-green-90: #153d25\npalette-green-100: #112b1b\npalette-indigo-10: #f2f2fc\npalette-indigo-20: #dcdcfc\npalette-indigo-30: #c2c2fc\npalette-indigo-40: #a7a7fa\npalette-indigo-50: #8585f2\npalette-indigo-60: #6767e6\npalette-indigo-70: #4d4dd1\npalette-indigo-80: #3737b3\npalette-indigo-90: #28288a\npalette-indigo-100: #202057\npalette-magenta-10: #faf0f4\npalette-magenta-20: #fad4e4\npalette-magenta-30: #fab4d1\npalette-magenta-40: #f78bb8\npalette-magenta-50: #ed5393\npalette-magenta-60: #d6246e\npalette-magenta-70: #b01355\npalette-magenta-80: #8a1244\npalette-magenta-90: #611535\npalette-magenta-100: #421527\npalette-purple-10: #f5f0fa\npalette-purple-20: #ead9fa\npalette-purple-30: #dabcf7\npalette-purple-40: #c79bf2\npalette-purple-50: #ae74e8\npalette-purple-60: #9656d6\npalette-purple-70: #7d3cbd\npalette-purple-80: #642b9e\npalette-purple-90: #4b2175\npalette-purple-100: #371c52\npalette-red-10: #faf0f0\npalette-red-20: #fad4d4\npalette-red-30: #fab6b6\npalette-red-40: #fa8e8e\npalette-red-50: #f55353\npalette-red-60: #de1b1b\npalette-red-70: #b80d0d\npalette-red-80: #8f0e0e\npalette-red-90: #661414\npalette-red-100: #451717\npalette-sky-10: #e8f4fa\npalette-sky-20: #bbe5fa\npalette-sky-30: #8dd4f7\npalette-sky-40: #53baed\npalette-sky-50: #229ad6\npalette-sky-60: #0c7bb3\npalette-sky-70: #066391\npalette-sky-80: #064d70\npalette-sky-90: #093952\npalette-sky-100: #0c2938\npalette-slate-10: #edf4f7\npalette-slate-20: #cbe3f5\npalette-slate-30: #a7ceeb\npalette-slate-40: #84b7db\npalette-slate-50: #5e95bd\npalette-slate-60: #48799c\npalette-slate-70: #376180\npalette-slate-80: #2d4d63\npalette-slate-90: #243947\npalette-slate-100: #1d2830\npalette-teal-10: #e4f7f6\npalette-teal-20: #a8ede9\npalette-teal-30: #6cd9d2\npalette-teal-40: #45bfb7\npalette-teal-50: #28a199\npalette-teal-60: #17827b\npalette-teal-70: #116963\npalette-teal-80: #0d524d\npalette-teal-90: #0b3d3a\npalette-teal-100: #092b29\n\nalert-background: &lt;&lt;colour palette-bronze-100&gt;&gt;\nalert-border: &lt;&lt;colour palette-bronze-70&gt;&gt;\nalert-highlight: &lt;&lt;colour palette-red-30&gt;&gt;\nalert-muted-foreground: &lt;&lt;colour palette-bronze-30&gt;&gt;\nbackground: &lt;&lt;colour palette-black&gt;&gt;\nblockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;\nbutton-background: linear-gradient(&lt;&lt;colour palette-gray-60&gt;&gt;, &lt;&lt;colour palette-gray-80&gt;&gt;)\nbutton-foreground: &lt;&lt;colour foreground&gt;&gt;\nbutton-border: &lt;&lt;colour muted-foreground&gt;&gt;\ncode-background: &lt;&lt;colour page-background&gt;&gt;\ncode-border: &lt;&lt;colour muted-foreground&gt;&gt;\ncode-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-delete-background: &lt;&lt;colour palette-red-90&gt;&gt;\ndiff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-equal-background:\ndiff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-insert-background: &lt;&lt;colour palette-green-90&gt;&gt;\ndiff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-invisible-background:\ndiff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;\ndirty-indicator: &lt;&lt;colour palette-red-30&gt;&gt;\ndownload-background: &lt;&lt;colour palette-green-40&gt;&gt;\ndownload-foreground: &lt;&lt;colour background&gt;&gt;\ndragger-background: &lt;&lt;colour foreground&gt;&gt;\ndragger-foreground: &lt;&lt;colour background&gt;&gt;\ndropdown-background: &lt;&lt;colour background&gt;&gt;\ndropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;\ndropdown-tab-background-selected: &lt;&lt;colour tab-background-selected&gt;&gt;\ndropdown-tab-background: &lt;&lt;colour tab-background&gt;&gt;\ndropzone-background: &lt;&lt;colour palette-gray-70&gt;&gt;\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: &lt;&lt;colour palette-purple-30&gt;&gt;\nexternal-link-foreground: &lt;&lt;colour palette-blue-30&gt;&gt;\nforeground: &lt;&lt;colour palette-white&gt;&gt;\nmessage-background: &lt;&lt;colour page-background&gt;&gt;\nmessage-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmessage-foreground: &lt;&lt;colour foreground&gt;&gt;\nmodal-backdrop: &lt;&lt;colour foreground&gt;&gt;\nmodal-background: &lt;&lt;colour background&gt;&gt;\nmodal-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmodal-footer-background: &lt;&lt;colour page-background&gt;&gt;\nmodal-footer-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmodal-header-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmuted-foreground: &lt;&lt;colour palette-gray-80&gt;&gt;\nnotification-background: &lt;&lt;colour page-background&gt;&gt;\nnotification-border: &lt;&lt;colour muted-foreground&gt;&gt;\npage-background: &lt;&lt;colour palette-gray-100&gt;&gt;\npre-background: &lt;&lt;colour page-background&gt;&gt;\npre-border: &lt;&lt;colour muted-foreground&gt;&gt;\nprimary: &lt;&lt;colour palette-blue-30&gt;&gt;\nselect-tag-background: linear-gradient(&lt;&lt;colour palette-gray-60&gt;&gt;, &lt;&lt;colour palette-gray-80&gt;&gt;)\nselect-tag-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-controls-foreground-hover: &lt;&lt;colour tiddler-controls-foreground-hover&gt;&gt;\nsidebar-controls-foreground: &lt;&lt;colour tiddler-controls-foreground&gt;&gt;\nsidebar-foreground-shadow: &lt;&lt;colour palette-black&gt;&gt;\nsidebar-foreground: &lt;&lt;colour sidebar-controls-foreground&gt;&gt;\nsidebar-muted-foreground-hover: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\nsidebar-muted-foreground: &lt;&lt;colour sidebar-controls-foreground&gt;&gt;\nsidebar-tab-background-selected: &lt;&lt;colour tab-background-selected&gt;&gt;\nsidebar-tab-background: &lt;&lt;colour tab-background&gt;&gt;\nsidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;\nsidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;\nsidebar-tab-divider: &lt;&lt;colour tab-divider&gt;&gt;\nsidebar-tab-foreground-selected: &lt;&lt;colour tab-foreground-selected&gt;&gt;\nsidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;\nsidebar-tiddler-link-foreground-hover: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\nsidebar-tiddler-link-foreground: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\nsite-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;\nstatic-alert-foreground: &lt;&lt;colour palette-gray-50&gt;&gt;\ntab-background-selected: &lt;&lt;colour background&gt;&gt;\ntab-background: &lt;&lt;colour tab-border&gt;&gt;\ntab-border-selected: &lt;&lt;colour tab-border&gt;&gt;\ntab-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntab-divider: &lt;&lt;colour tab-border&gt;&gt;\ntab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;\ntab-foreground: &lt;&lt;colour palette-gray-10&gt;&gt;\ntable-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntable-footer-background: &lt;&lt;colour page-background&gt;&gt;\ntable-header-background: &lt;&lt;colour page-background&gt;&gt;\ntag-background: &lt;&lt;colour palette-blue-40&gt;&gt;\ntag-foreground: &lt;&lt;colour palette-black&gt;&gt;\ntiddler-background: &lt;&lt;colour background&gt;&gt;\ntiddler-border: transparent\ntiddler-controls-foreground-hover: &lt;&lt;colour palette-gray-30&gt;&gt;\ntiddler-controls-foreground-selected: &lt;&lt;colour palette-gray-10&gt;&gt;\ntiddler-controls-foreground: &lt;&lt;colour palette-gray-50&gt;&gt;\ntiddler-editor-background: &lt;&lt;colour page-background&gt;&gt;\ntiddler-editor-border-image: transparent\ntiddler-editor-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntiddler-editor-fields-even: &lt;&lt;colour palette-gray-90&gt;&gt;\ntiddler-editor-fields-odd: &lt;&lt;colour palette-gray-100&gt;&gt;\ntiddler-info-background: &lt;&lt;colour background&gt;&gt;\ntiddler-info-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntiddler-info-tab-background: &lt;&lt;colour tiddler-info-background&gt;&gt;\ntiddler-link-background: &lt;&lt;colour background&gt;&gt;\ntiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;\ntiddler-subtitle-foreground: &lt;&lt;colour palette-gray-50&gt;&gt;\ntiddler-title-foreground: &lt;&lt;colour palette-gray-10&gt;&gt;\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\ntoolbar-info-button:\ntoolbar-edit-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-cancel-button:\ntoolbar-done-button:\nuntagged-background: &lt;&lt;colour palette-gray-40&gt;&gt;\nvery-muted-foreground: &lt;&lt;colour palette-gray-50&gt;&gt;\nwikilist-background: &lt;&lt;colour background&gt;&gt;\nwikilist-item: &lt;&lt;colour background&gt;&gt;\nwikilist-info: &lt;&lt;colour foreground&gt;&gt;\nwikilist-title: &lt;&lt;colour tiddler-title-foreground&gt;&gt;\nwikilist-title-svg: &lt;&lt;colour wikilist-title&gt;&gt;\nwikilist-url: &lt;&lt;colour tiddler-subtitle-foreground&gt;&gt;\nwikilist-button-open: &lt;&lt;colour palette-green-80&gt;&gt;\nwikilist-button-open-hover: &lt;&lt;colour palette-green-70&gt;&gt;\nwikilist-button-reveal: &lt;&lt;colour palette-blue-80&gt;&gt;\nwikilist-button-reveal-hover: &lt;&lt;colour palette-blue-70&gt;&gt;\nwikilist-button-remove: &lt;&lt;colour palette-red-80&gt;&gt;\nwikilist-button-remove-hover: &lt;&lt;colour palette-red-70&gt;&gt;\nwikilist-toolbar-background: &lt;&lt;colour page-background&gt;&gt;\nwikilist-toolbar-foreground: &lt;&lt;colour foreground&gt;&gt;\nwikilist-droplink-dragover: &lt;&lt;colour palette-gray-70&gt;&gt;\nwikilist-button-background: &lt;&lt;colour palette-gray-70&gt;&gt;\nwikilist-button-foreground: &lt;&lt;colour foreground&gt;&gt;&quot;
         },
         &quot;$:/themes/unindented/sine/palettes/Light&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/palettes/Light&quot;,
             &quot;name&quot;: &quot;Sine (Light)&quot;,
-            &quot;description&quot;: &quot;My own light palette&quot;,
+            &quot;description&quot;: &quot;Light palette based on Mineral UI colors&quot;,
             &quot;tags&quot;: &quot;$:/tags/Palette&quot;,
             &quot;type&quot;: &quot;application/x-tiddler-dictionary&quot;,
-            &quot;text&quot;: &quot;palette-white: #ffffff\npalette-black: #1d1f24\npalette-blue-10: #f0f5fc\npalette-blue-20: #cfe0fc\npalette-blue-30: #accbfc\npalette-blue-40: #84b1fa\npalette-blue-50: #5691f0\npalette-blue-60: #3272d9\npalette-blue-70: #1d5bbf\npalette-blue-80: #114599\npalette-blue-90: #103570\npalette-blue-100: #15233b\npalette-bronze-10: #fcf2e6\npalette-bronze-20: #fad8af\npalette-bronze-30: #f5bc76\npalette-bronze-40: #e89c3f\npalette-bronze-50: #cf7911\npalette-bronze-60: #ad5f00\npalette-bronze-70: #8a4d03\npalette-bronze-80: #693d07\npalette-bronze-90: #4d2f0b\npalette-bronze-100: #33210c\npalette-dusk-10: #f4f2f7\npalette-dusk-20: #e3dcf7\npalette-dusk-30: #cec2f0\npalette-dusk-40: #b5a6e3\npalette-dusk-50: #9886cf\npalette-dusk-60: #7a68b3\npalette-dusk-70: #645396\npalette-dusk-80: #4f4178\npalette-dusk-90: #3a3154\npalette-dusk-100: #282436\npalette-gray-10: #f5f7fa\npalette-gray-20: #ebeff5\npalette-gray-30: #dde3ed\npalette-gray-40: #c8d1e0\npalette-gray-50: #afbacc\npalette-gray-60: #8e99ab\npalette-gray-70: #707a8a\npalette-gray-80: #58606e\npalette-gray-90: #434a54\npalette-gray-100: #333840\npalette-green-10: #e1faeb\npalette-green-20: #abedc5\npalette-green-30: #7ddba3\npalette-green-40: #57c282\npalette-green-50: #3ba164\npalette-green-60: #2a854e\npalette-green-70: #20693d\npalette-green-80: #1a5230\npalette-green-90: #153d25\npalette-green-100: #112b1b\npalette-indigo-10: #f2f2fc\npalette-indigo-20: #dcdcfc\npalette-indigo-30: #c2c2fc\npalette-indigo-40: #a7a7fa\npalette-indigo-50: #8585f2\npalette-indigo-60: #6767e6\npalette-indigo-70: #4d4dd1\npalette-indigo-80: #3737b3\npalette-indigo-90: #28288a\npalette-indigo-100: #202057\npalette-magenta-10: #faf0f4\npalette-magenta-20: #fad4e4\npalette-magenta-30: #fab4d1\npalette-magenta-40: #f78bb8\npalette-magenta-50: #ed5393\npalette-magenta-60: #d6246e\npalette-magenta-70: #b01355\npalette-magenta-80: #8a1244\npalette-magenta-90: #611535\npalette-magenta-100: #421527\npalette-purple-10: #f5f0fa\npalette-purple-20: #ead9fa\npalette-purple-30: #dabcf7\npalette-purple-40: #c79bf2\npalette-purple-50: #ae74e8\npalette-purple-60: #9656d6\npalette-purple-70: #7d3cbd\npalette-purple-80: #642b9e\npalette-purple-90: #4b2175\npalette-purple-100: #371c52\npalette-red-10: #faf0f0\npalette-red-20: #fad4d4\npalette-red-30: #fab6b6\npalette-red-40: #fa8e8e\npalette-red-50: #f55353\npalette-red-60: #de1b1b\npalette-red-70: #b80d0d\npalette-red-80: #8f0e0e\npalette-red-90: #661414\npalette-red-100: #451717\npalette-sky-10: #e8f4fa\npalette-sky-20: #bbe5fa\npalette-sky-30: #8dd4f7\npalette-sky-40: #53baed\npalette-sky-50: #229ad6\npalette-sky-60: #0c7bb3\npalette-sky-70: #066391\npalette-sky-80: #064d70\npalette-sky-90: #093952\npalette-sky-100: #0c2938\npalette-slate-10: #edf4f7\npalette-slate-20: #cbe3f5\npalette-slate-30: #a7ceeb\npalette-slate-40: #84b7db\npalette-slate-50: #5e95bd\npalette-slate-60: #48799c\npalette-slate-70: #376180\npalette-slate-80: #2d4d63\npalette-slate-90: #243947\npalette-slate-100: #1d2830\npalette-teal-10: #e4f7f6\npalette-teal-20: #a8ede9\npalette-teal-30: #6cd9d2\npalette-teal-40: #45bfb7\npalette-teal-50: #28a199\npalette-teal-60: #17827b\npalette-teal-70: #116963\npalette-teal-80: #0d524d\npalette-teal-90: #0b3d3a\npalette-teal-100: #092b29\n\nalert-background: #ffe476\nalert-border: #b99e2f\nalert-highlight: #881122\nalert-muted-foreground: #b99e2f\nbackground: #ffffff\nblockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;\nbutton-background:\nbutton-foreground:\nbutton-border:\ncode-background: #f7f7f9\ncode-border: #e1e1e8\ncode-foreground: #dd1144\ndiff-delete-background: #ffc9c9\ndiff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-equal-background: \ndiff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-insert-background: #aaefad\ndiff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-invisible-background: \ndiff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;\ndirty-indicator: #ff0000\ndownload-background: #34c734\ndownload-foreground: &lt;&lt;colour background&gt;&gt;\ndragger-background: &lt;&lt;colour foreground&gt;&gt;\ndragger-foreground: &lt;&lt;colour background&gt;&gt;\ndropdown-background: &lt;&lt;colour background&gt;&gt;\ndropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;\ndropdown-tab-background-selected: #fff\ndropdown-tab-background: #ececec\ndropzone-background: rgba(0,200,0,0.7)\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: #0000aa\nexternal-link-foreground: #0000ee\nforeground: #333333\nmessage-background: #ecf2ff\nmessage-border: #cfd6e6\nmessage-foreground: #547599\nmodal-backdrop: &lt;&lt;colour foreground&gt;&gt;\nmodal-background: &lt;&lt;colour background&gt;&gt;\nmodal-border: #999999\nmodal-footer-background: #f5f5f5\nmodal-footer-border: #dddddd\nmodal-header-border: #eeeeee\nmuted-foreground: #bbb\nnotification-background: #ffffdd\nnotification-border: #999999\npage-background: #f4f4f4\npre-background: #f5f5f5\npre-border: #cccccc\nprimary: #5778d8\nselect-tag-background:\nselect-tag-foreground:\nsidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-controls-foreground-hover: #000000\nsidebar-controls-foreground: #aaaaaa\nsidebar-foreground-shadow: rgba(255,255,255, 0.8)\nsidebar-foreground: #acacac\nsidebar-muted-foreground-hover: #444444\nsidebar-muted-foreground: #c0c0c0\nsidebar-tab-background-selected: #f4f4f4\nsidebar-tab-background: #e0e0e0\nsidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;\nsidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;\nsidebar-tab-divider: #e4e4e4\nsidebar-tab-foreground-selected:\nsidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;\nsidebar-tiddler-link-foreground-hover: #444444\nsidebar-tiddler-link-foreground: #999999\nsite-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;\nstatic-alert-foreground: #aaaaaa\ntab-background-selected: #ffffff\ntab-background: #d8d8d8\ntab-border-selected: #d8d8d8\ntab-border: #cccccc\ntab-divider: #d8d8d8\ntab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;\ntab-foreground: #666666\ntable-border: #dddddd\ntable-footer-background: #a8a8a8\ntable-header-background: #f0f0f0\ntag-background: #ec6\ntag-foreground: #ffffff\ntiddler-background: &lt;&lt;colour background&gt;&gt;\ntiddler-border: &lt;&lt;colour background&gt;&gt;\ntiddler-controls-foreground-hover: #888888\ntiddler-controls-foreground-selected: #444444\ntiddler-controls-foreground: #cccccc\ntiddler-editor-background: #f8f8f8\ntiddler-editor-border-image: #ffffff\ntiddler-editor-border: #cccccc\ntiddler-editor-fields-even: #e0e8e0\ntiddler-editor-fields-odd: #f0f4f0\ntiddler-info-background: #f8f8f8\ntiddler-info-border: #dddddd\ntiddler-info-tab-background: #f8f8f8\ntiddler-link-background: &lt;&lt;colour background&gt;&gt;\ntiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;\ntiddler-subtitle-foreground: #c0c0c0\ntiddler-title-foreground: #182955\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\ntoolbar-info-button:\ntoolbar-edit-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-cancel-button:\ntoolbar-done-button:\nuntagged-background: #999999\nvery-muted-foreground: #888888\nwikilist-background: #e5e5e5\nwikilist-item: #fff\nwikilist-info: #000\nwikilist-title: #666\nwikilist-title-svg: &lt;&lt;colour wikilist-title&gt;&gt;\nwikilist-url: #aaa\nwikilist-button-open: #4fb82b\nwikilist-button-open-hover: green\nwikilist-button-reveal: #5778d8\nwikilist-button-reveal-hover: blue\nwikilist-button-remove: #d85778\nwikilist-button-remove-hover: red\nwikilist-toolbar-background: #d3d3d3\nwikilist-toolbar-foreground: #888\nwikilist-droplink-dragover: rgba(255,192,192,0.5)\nwikilist-button-background: #acacac\nwikilist-button-foreground: #000&quot;
+            &quot;text&quot;: &quot;palette-white: #ffffff\npalette-black: #1d1f24\npalette-blue-10: #f0f5fc\npalette-blue-20: #cfe0fc\npalette-blue-30: #accbfc\npalette-blue-40: #84b1fa\npalette-blue-50: #5691f0\npalette-blue-60: #3272d9\npalette-blue-70: #1d5bbf\npalette-blue-80: #114599\npalette-blue-90: #103570\npalette-blue-100: #15233b\npalette-bronze-10: #fcf2e6\npalette-bronze-20: #fad8af\npalette-bronze-30: #f5bc76\npalette-bronze-40: #e89c3f\npalette-bronze-50: #cf7911\npalette-bronze-60: #ad5f00\npalette-bronze-70: #8a4d03\npalette-bronze-80: #693d07\npalette-bronze-90: #4d2f0b\npalette-bronze-100: #33210c\npalette-dusk-10: #f4f2f7\npalette-dusk-20: #e3dcf7\npalette-dusk-30: #cec2f0\npalette-dusk-40: #b5a6e3\npalette-dusk-50: #9886cf\npalette-dusk-60: #7a68b3\npalette-dusk-70: #645396\npalette-dusk-80: #4f4178\npalette-dusk-90: #3a3154\npalette-dusk-100: #282436\npalette-gray-10: #f5f7fa\npalette-gray-20: #ebeff5\npalette-gray-30: #dde3ed\npalette-gray-40: #c8d1e0\npalette-gray-50: #afbacc\npalette-gray-60: #8e99ab\npalette-gray-70: #707a8a\npalette-gray-80: #58606e\npalette-gray-90: #434a54\npalette-gray-100: #333840\npalette-green-10: #e1faeb\npalette-green-20: #abedc5\npalette-green-30: #7ddba3\npalette-green-40: #57c282\npalette-green-50: #3ba164\npalette-green-60: #2a854e\npalette-green-70: #20693d\npalette-green-80: #1a5230\npalette-green-90: #153d25\npalette-green-100: #112b1b\npalette-indigo-10: #f2f2fc\npalette-indigo-20: #dcdcfc\npalette-indigo-30: #c2c2fc\npalette-indigo-40: #a7a7fa\npalette-indigo-50: #8585f2\npalette-indigo-60: #6767e6\npalette-indigo-70: #4d4dd1\npalette-indigo-80: #3737b3\npalette-indigo-90: #28288a\npalette-indigo-100: #202057\npalette-magenta-10: #faf0f4\npalette-magenta-20: #fad4e4\npalette-magenta-30: #fab4d1\npalette-magenta-40: #f78bb8\npalette-magenta-50: #ed5393\npalette-magenta-60: #d6246e\npalette-magenta-70: #b01355\npalette-magenta-80: #8a1244\npalette-magenta-90: #611535\npalette-magenta-100: #421527\npalette-purple-10: #f5f0fa\npalette-purple-20: #ead9fa\npalette-purple-30: #dabcf7\npalette-purple-40: #c79bf2\npalette-purple-50: #ae74e8\npalette-purple-60: #9656d6\npalette-purple-70: #7d3cbd\npalette-purple-80: #642b9e\npalette-purple-90: #4b2175\npalette-purple-100: #371c52\npalette-red-10: #faf0f0\npalette-red-20: #fad4d4\npalette-red-30: #fab6b6\npalette-red-40: #fa8e8e\npalette-red-50: #f55353\npalette-red-60: #de1b1b\npalette-red-70: #b80d0d\npalette-red-80: #8f0e0e\npalette-red-90: #661414\npalette-red-100: #451717\npalette-sky-10: #e8f4fa\npalette-sky-20: #bbe5fa\npalette-sky-30: #8dd4f7\npalette-sky-40: #53baed\npalette-sky-50: #229ad6\npalette-sky-60: #0c7bb3\npalette-sky-70: #066391\npalette-sky-80: #064d70\npalette-sky-90: #093952\npalette-sky-100: #0c2938\npalette-slate-10: #edf4f7\npalette-slate-20: #cbe3f5\npalette-slate-30: #a7ceeb\npalette-slate-40: #84b7db\npalette-slate-50: #5e95bd\npalette-slate-60: #48799c\npalette-slate-70: #376180\npalette-slate-80: #2d4d63\npalette-slate-90: #243947\npalette-slate-100: #1d2830\npalette-teal-10: #e4f7f6\npalette-teal-20: #a8ede9\npalette-teal-30: #6cd9d2\npalette-teal-40: #45bfb7\npalette-teal-50: #28a199\npalette-teal-60: #17827b\npalette-teal-70: #116963\npalette-teal-80: #0d524d\npalette-teal-90: #0b3d3a\npalette-teal-100: #092b29\n\nalert-background: &lt;&lt;colour palette-bronze-10&gt;&gt;\nalert-border: &lt;&lt;colour palette-bronze-40&gt;&gt;\nalert-highlight: &lt;&lt;colour palette-red-80&gt;&gt;\nalert-muted-foreground: &lt;&lt;colour palette-bronze-80&gt;&gt;\nbackground: &lt;&lt;colour palette-white&gt;&gt;\nblockquote-bar: &lt;&lt;colour muted-foreground&gt;&gt;\nbutton-background: linear-gradient(&lt;&lt;colour palette-gray-30&gt;&gt;, &lt;&lt;colour palette-gray-10&gt;&gt;)\nbutton-foreground: &lt;&lt;colour foreground&gt;&gt;\nbutton-border: &lt;&lt;colour muted-foreground&gt;&gt;\ncode-background: &lt;&lt;colour page-background&gt;&gt;\ncode-border: &lt;&lt;colour muted-foreground&gt;&gt;\ncode-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-delete-background: &lt;&lt;colour palette-red-20&gt;&gt;\ndiff-delete-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-equal-background:\ndiff-equal-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-insert-background: &lt;&lt;colour palette-green-20&gt;&gt;\ndiff-insert-foreground: &lt;&lt;colour foreground&gt;&gt;\ndiff-invisible-background:\ndiff-invisible-foreground: &lt;&lt;colour muted-foreground&gt;&gt;\ndirty-indicator: &lt;&lt;colour palette-red-80&gt;&gt;\ndownload-background: &lt;&lt;colour palette-green-70&gt;&gt;\ndownload-foreground: &lt;&lt;colour background&gt;&gt;\ndragger-background: &lt;&lt;colour foreground&gt;&gt;\ndragger-foreground: &lt;&lt;colour background&gt;&gt;\ndropdown-background: &lt;&lt;colour background&gt;&gt;\ndropdown-border: &lt;&lt;colour muted-foreground&gt;&gt;\ndropdown-tab-background-selected: &lt;&lt;colour tab-background-selected&gt;&gt;\ndropdown-tab-background: &lt;&lt;colour tab-background&gt;&gt;\ndropzone-background: &lt;&lt;colour palette-gray-40&gt;&gt;\nexternal-link-background-hover: inherit\nexternal-link-background-visited: inherit\nexternal-link-background: inherit\nexternal-link-foreground-hover: inherit\nexternal-link-foreground-visited: &lt;&lt;colour palette-purple-80&gt;&gt;\nexternal-link-foreground: &lt;&lt;colour palette-blue-80&gt;&gt;\nforeground: &lt;&lt;colour palette-black&gt;&gt;\nmessage-background: &lt;&lt;colour page-background&gt;&gt;\nmessage-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmessage-foreground: &lt;&lt;colour foreground&gt;&gt;\nmodal-backdrop: &lt;&lt;colour foreground&gt;&gt;\nmodal-background: &lt;&lt;colour background&gt;&gt;\nmodal-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmodal-footer-background: &lt;&lt;colour page-background&gt;&gt;\nmodal-footer-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmodal-header-border: &lt;&lt;colour muted-foreground&gt;&gt;\nmuted-foreground: &lt;&lt;colour palette-gray-30&gt;&gt;\nnotification-background: &lt;&lt;colour page-background&gt;&gt;\nnotification-border: &lt;&lt;colour muted-foreground&gt;&gt;\npage-background: &lt;&lt;colour palette-gray-10&gt;&gt;\npre-background: &lt;&lt;colour page-background&gt;&gt;\npre-border: &lt;&lt;colour muted-foreground&gt;&gt;\nprimary: &lt;&lt;colour palette-blue-80&gt;&gt;\nselect-tag-background: linear-gradient(&lt;&lt;colour palette-gray-30&gt;&gt;, &lt;&lt;colour palette-gray-10&gt;&gt;)\nselect-tag-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-button-foreground: &lt;&lt;colour foreground&gt;&gt;\nsidebar-controls-foreground-hover: &lt;&lt;colour tiddler-controls-foreground-hover&gt;&gt;\nsidebar-controls-foreground: &lt;&lt;colour tiddler-controls-foreground&gt;&gt;\nsidebar-foreground-shadow: &lt;&lt;colour palette-white&gt;&gt;\nsidebar-foreground: &lt;&lt;colour sidebar-controls-foreground&gt;&gt;\nsidebar-muted-foreground-hover: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\nsidebar-muted-foreground: &lt;&lt;colour sidebar-controls-foreground&gt;&gt;\nsidebar-tab-background-selected: &lt;&lt;colour tab-background-selected&gt;&gt;\nsidebar-tab-background: &lt;&lt;colour tab-background&gt;&gt;\nsidebar-tab-border-selected: &lt;&lt;colour tab-border-selected&gt;&gt;\nsidebar-tab-border: &lt;&lt;colour tab-border&gt;&gt;\nsidebar-tab-divider: &lt;&lt;colour tab-divider&gt;&gt;\nsidebar-tab-foreground-selected: &lt;&lt;colour tab-foreground-selected&gt;&gt;\nsidebar-tab-foreground: &lt;&lt;colour tab-foreground&gt;&gt;\nsidebar-tiddler-link-foreground-hover: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\nsidebar-tiddler-link-foreground: &lt;&lt;colour sidebar-controls-foreground-hover&gt;&gt;\nsite-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;\nstatic-alert-foreground: &lt;&lt;colour palette-gray-60&gt;&gt;\ntab-background-selected: &lt;&lt;colour background&gt;&gt;\ntab-background: &lt;&lt;colour tab-border&gt;&gt;\ntab-border-selected: &lt;&lt;colour tab-border&gt;&gt;\ntab-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntab-divider: &lt;&lt;colour tab-border&gt;&gt;\ntab-foreground-selected: &lt;&lt;colour tab-foreground&gt;&gt;\ntab-foreground: &lt;&lt;colour palette-gray-100&gt;&gt;\ntable-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntable-footer-background: &lt;&lt;colour page-background&gt;&gt;\ntable-header-background: &lt;&lt;colour page-background&gt;&gt;\ntag-background: &lt;&lt;colour palette-blue-70&gt;&gt;\ntag-foreground: &lt;&lt;colour palette-white&gt;&gt;\ntiddler-background: &lt;&lt;colour background&gt;&gt;\ntiddler-border: transparent\ntiddler-controls-foreground-hover: &lt;&lt;colour palette-gray-80&gt;&gt;\ntiddler-controls-foreground-selected: &lt;&lt;colour palette-gray-100&gt;&gt;\ntiddler-controls-foreground: &lt;&lt;colour palette-gray-60&gt;&gt;\ntiddler-editor-background: &lt;&lt;colour page-background&gt;&gt;\ntiddler-editor-border-image: transparent\ntiddler-editor-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntiddler-editor-fields-even: &lt;&lt;colour palette-gray-20&gt;&gt;\ntiddler-editor-fields-odd: &lt;&lt;colour palette-gray-10&gt;&gt;\ntiddler-info-background: &lt;&lt;colour background&gt;&gt;\ntiddler-info-border: &lt;&lt;colour muted-foreground&gt;&gt;\ntiddler-info-tab-background: &lt;&lt;colour tiddler-info-background&gt;&gt;\ntiddler-link-background: &lt;&lt;colour background&gt;&gt;\ntiddler-link-foreground: &lt;&lt;colour primary&gt;&gt;\ntiddler-subtitle-foreground: &lt;&lt;colour palette-gray-60&gt;&gt;\ntiddler-title-foreground: &lt;&lt;colour palette-gray-100&gt;&gt;\ntoolbar-new-button:\ntoolbar-options-button:\ntoolbar-save-button:\ntoolbar-info-button:\ntoolbar-edit-button:\ntoolbar-close-button:\ntoolbar-delete-button:\ntoolbar-cancel-button:\ntoolbar-done-button:\nuntagged-background: &lt;&lt;colour palette-gray-70&gt;&gt;\nvery-muted-foreground: &lt;&lt;colour palette-gray-60&gt;&gt;\nwikilist-background: &lt;&lt;colour background&gt;&gt;\nwikilist-item: &lt;&lt;colour background&gt;&gt;\nwikilist-info: &lt;&lt;colour foreground&gt;&gt;\nwikilist-title: &lt;&lt;colour tiddler-title-foreground&gt;&gt;\nwikilist-title-svg: &lt;&lt;colour wikilist-title&gt;&gt;\nwikilist-url: &lt;&lt;colour tiddler-subtitle-foreground&gt;&gt;\nwikilist-button-open: &lt;&lt;colour palette-green-30&gt;&gt;\nwikilist-button-open-hover: &lt;&lt;colour palette-green-40&gt;&gt;\nwikilist-button-reveal: &lt;&lt;colour palette-blue-30&gt;&gt;\nwikilist-button-reveal-hover: &lt;&lt;colour palette-blue-40&gt;&gt;\nwikilist-button-remove: &lt;&lt;colour palette-red-30&gt;&gt;\nwikilist-button-remove-hover: &lt;&lt;colour palette-red-40&gt;&gt;\nwikilist-toolbar-background: &lt;&lt;colour page-background&gt;&gt;\nwikilist-toolbar-foreground: &lt;&lt;colour foreground&gt;&gt;\nwikilist-droplink-dragover: &lt;&lt;colour palette-gray-40&gt;&gt;\nwikilist-button-background: &lt;&lt;colour palette-gray-40&gt;&gt;\nwikilist-button-foreground: &lt;&lt;colour foreground&gt;&gt;&quot;
         },
         &quot;$:/plugins/unindented/sine/readme&quot;: {
             &quot;title&quot;: &quot;$:/plugins/unindented/sine/readme&quot;,
@@ -9966,27 +9971,231 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div title="Chandler Example" revision="0" bag="default">
+<div created="20200610161301119" modified="20200610161301119" title="Books To Read" revision="0" bag="default">
 <pre>&lt;&lt;chandler tag:&quot;To Read&quot; sort:&quot;title&quot;&gt;&gt;</pre>
 </div>
+<div created="20200613221018133" modified="20200613221020853" title="Button Example" revision="0" bag="default">
+<pre>&lt;$button class=&quot;tc-btn-big-green&quot;&gt;
+Download Something {{$:/core/images/save-button}}
+&lt;/$button&gt;</pre>
+</div>
+<div created="20200610233218232" modified="20200613003156063" title="Code Example" revision="0" bag="default">
+<pre>Some inline `code`.
+
+!! No highlight
+
+```
+  ! &quot; # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~
+```
+
+!! C
+
+```c
+#include &lt;stdio.h&gt;
+int main(int argc, char *argv[]) {
+  printf(&quot;Hello, world!\n&quot;);
+  return 0;
+}
+```
+
+!! C++
+
+```cpp
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+  cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;
+  return 0;
+}
+```
+
+!! C#
+
+```csharp
+using System;
+class Program {
+  public static void Main() {
+    Console.WriteLine(&quot;Hello, world!&quot;);
+  }
+}
+```
+
+!! CSS
+
+```css
+body:before {
+  content: &quot;Hello, world!&quot;;
+}
+```
+
+!! Elixir
+
+```elixir
+IO.puts &quot;Hello, world!&quot;
+```
+
+!! Erlang
+
+```erlang
+io:format(&quot;~s~n&quot;, [&quot;Hello, world!&quot;])
+```
+
+!! Go
+
+```go
+package main
+import &quot;fmt&quot;
+func main() {
+  fmt.Println(&quot;Hello, world!&quot;)
+}
+```
+
+!! Haskell
+
+```haskell
+main = putStrLn &quot;Hello, world!&quot;
+```
+
+!! HTML
+
+```html
+&lt;html&gt;
+  &lt;body&gt;
+    Hello, world!
+  &lt;/body&gt;
+&lt;/html&gt;
+```
+
+!! Java
+
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, world!&quot;);
+  }
+}
+```
+
+!! ~JavaScript
+
+```javascript
+console.log(&quot;Hello, world!&quot;);
+```
+
+!! Kotlin
+
+```kotlin
+fun main(args : Array&lt;String&gt;) {
+  println(&quot;Hello, world!&quot;)
+}
+```
+
+!! Lua
+
+```lua
+print(&quot;Hello, world!&quot;)
+```
+
+!! Objective-C
+
+```objectivec
+#import &lt;stdio.h&gt;
+int main(void) {
+  printf(&quot;Hello, world!\n&quot;);
+  return 0;
+}
+```
+
+!! Perl
+
+```perl
+print &quot;Hello, world!&quot;;
+```
+
+!! PHP
+
+```php
+&lt;?= 'Hello, world!' ?&gt;
+```
+
+!! Python
+
+```python
+print &quot;Hello, world!&quot;
+```
+
+!! R
+
+```r
+cat('Hello, world!')
+```
+
+!! Ruby
+
+```ruby
+puts &quot;Hello, world!&quot;
+```
+
+!! Rust
+
+```rust
+fn main() {
+  println!(&quot;Hello, world!&quot;);
+}
+```
+
+!! Shell
+
+```sh
+echo 'Hello, world!'
+```
+
+!! Swift
+
+```swift
+println(&quot;Hello, world!&quot;)
+```
+
+!! ~TypeScript
+
+```typescript
+console.log(&quot;Hello, world!&quot;);
+```</pre>
+</div>
+<div created="20200613221946060" modified="20200613221952216" title="Diff Example" revision="0" bag="default">
+<pre>&lt;$diff-text source=&quot;Hey Jude, don't make it bad. Take a sad song and make it better. Remember to let her into your heart
+Then you can start to make it better.&quot; dest=&quot;Hey Jude, don't be afraid. You were made to go out and get her. The minute you let her under your skin. Then you begin to make it better.&quot;/&gt;</pre>
+</div>
 <div title="Hello There" revision="0" bag="default">
-<pre>This is a demo site for my TiddlyWiki5 plugins and themes.
+<pre>This is a demo site for my [[TiddlyWiki|https://tiddlywiki.com/]] plugins and themes.
 
-!! Chandler
+!! Sine Theme
 
-To install, drag this into your ~TiddlyWiki: 
-&lt;span class=&quot;tc-tag-label tc-btn-invisible&quot; style=&quot;cursor: move&quot;&gt;
-&lt;$draggable filter=&quot;$:/plugins/unindented/chandler&quot;&gt;
-Chandler
-&lt;/$draggable&gt;
-&lt;/span&gt;
+It's the theme you're seeing right now! You can toggle between light and dark palettes by clicking here:
+&lt;span style=&quot;font-size: 1.2em;&quot;&gt;{{$:/themes/unindented/sine/ui/Buttons/palette-switcher}}&lt;/span&gt;
 
-!! Theme
-
-To install, drag this into your ~TiddlyWiki: 
+To install, drag this into your ~TiddlyWiki:
 &lt;span class=&quot;tc-tag-label tc-btn-invisible&quot; style=&quot;cursor: move&quot;&gt;
 &lt;$draggable filter=&quot;$:/themes/unindented/sine $:/theme $:/palette&quot;&gt;
 Sine Theme
+&lt;/$draggable&gt;
+&lt;/span&gt;
+
+!! Chandler Macro
+
+The Chandler system, as described by Joe Armstrong in his post [[Fun with the TiddlyWiki|https://joearms.github.io/#2018-12-26%20Fun%20with%20the%20TiddlyWiki]], is a triage system to manage lists of tasks that must be done now, later, or which were done.
+
+You can see an example here: [[Books To Read]]
+
+To install, drag this into your ~TiddlyWiki:
+&lt;span class=&quot;tc-tag-label tc-btn-invisible&quot; style=&quot;cursor: move&quot;&gt;
+&lt;$draggable filter=&quot;$:/plugins/unindented/chandler&quot;&gt;
+Chandler
 &lt;/$draggable&gt;
 &lt;/span&gt;</pre>
 </div>
