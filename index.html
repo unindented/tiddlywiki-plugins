@@ -67,14 +67,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
       -moz-osx-font-smoothing: grayscale;
     }
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 @media (min-width: 480px) {
   html {
     font-size: calc(
-      16px +
-        (20 - 16) *
+      15px +
+        (19 - 15) *
         (100vw - 480px) /
         (1600 - 480)
     );
@@ -83,7 +83,7 @@ html {
 
 @media (min-width: 1600px) {
   html {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 body.tc-body {
@@ -9725,10 +9725,58 @@ Error message and password prompt
 <div author="Daniel Perez Alvarez" core-version="&gt;=5.1.0" dependents="" description="Chandler triage system" list="readme usage" name="Chandler" plugin-type="plugin" title="$:/plugins/unindented/chandler" type="application/json" version="5.1.22" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
+        &quot;$:/language/unindented/chandler/Buttons/AddNow/text&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/AddNow/text&quot;,
+            &quot;text&quot;: &quot;Add Now&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/AddLater/text&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/AddLater/text&quot;,
+            &quot;text&quot;: &quot;Add Later&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/Now/tooltip&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/Now/tooltip&quot;,
+            &quot;text&quot;: &quot;Now&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/Now/label&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/Now/label&quot;,
+            &quot;text&quot;: &quot;do now&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/Later/tooltip&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/Later/tooltip&quot;,
+            &quot;text&quot;: &quot;Later&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/Later/label&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/Later/label&quot;,
+            &quot;text&quot;: &quot;do later&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/Done/tooltip&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/Done/tooltip&quot;,
+            &quot;text&quot;: &quot;Done&quot;
+        },
+        &quot;$:/language/unindented/chandler/Buttons/Done/label&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Buttons/Done/label&quot;,
+            &quot;text&quot;: &quot;mark done&quot;
+        },
+        &quot;$:/language/unindented/chandler/Lists/Empty/message&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Lists/Empty/message&quot;,
+            &quot;text&quot;: &quot;Nothing&quot;
+        },
+        &quot;$:/language/unindented/chandler/Lists/Now/title&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Lists/Now/title&quot;,
+            &quot;text&quot;: &quot;Now&quot;
+        },
+        &quot;$:/language/unindented/chandler/Lists/Later/title&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Lists/Later/title&quot;,
+            &quot;text&quot;: &quot;Later&quot;
+        },
+        &quot;$:/language/unindented/chandler/Lists/Done/title&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/chandler/Lists/Done/title&quot;,
+            &quot;text&quot;: &quot;Done&quot;
+        },
         &quot;$:/plugins/unindented/chandler/Macros&quot;: {
             &quot;title&quot;: &quot;$:/plugins/unindented/chandler/Macros&quot;,
             &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
-            &quot;text&quot;: &quot;\\define chandler-button-Now(tag)\n\\whitespace trim\n&lt;$button&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=\&quot;[[$tag$]] Now\&quot;/&gt;\n  Add Now\n&lt;/$button&gt;\n\\end\n\n\\define chandler-button-Later(tag)\n\\whitespace trim\n&lt;$button&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=\&quot;[[$tag$]] Later\&quot;/&gt;\n  Add Later\n&lt;/$button&gt;\n\\end\n\n\\define chandler-buttons(tag)\n\\whitespace trim\n&lt;&lt;chandler-button-Now tag:\&quot;$tag$\&quot;&gt;&gt;&lt;$text text=\&quot; \&quot;/&gt;&lt;&lt;chandler-button-Later tag:\&quot;$tag$\&quot;&gt;&gt;\n\\end\n\n\\define chandler-action-Now()\n\\whitespace trim\n&lt;$button tooltip=\&quot;Now\&quot;&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;Now\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Later\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Done\&quot;/&gt;\n  {{$:/core/images/timestamp-on}}\n&lt;/$button&gt;\n\\end\n\n\\define chandler-action-Later()\n\\whitespace trim\n &lt;$button tooltip=\&quot;Later\&quot;&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Now\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;Later\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Done\&quot;/&gt;\n  {{$:/core/images/timestamp-off}}\n&lt;/$button&gt;\n\\end\n\n\\define chandler-action-Done()\n\\whitespace trim\n&lt;$button tooltip=\&quot;Done\&quot;&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Now\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Later\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;Done\&quot;/&gt;\n  {{$:/core/images/done-button}}\n&lt;/$button&gt;\n\\end\n\n\\define chandler-actions-Now()\n\\whitespace trim\n  &lt;&lt;chandler-action-Later&gt;&gt;\n  &lt;&lt;chandler-action-Done&gt;&gt;\n\\end\n\n\\define chandler-actions-Later()\n\\whitespace trim\n  &lt;&lt;chandler-action-Now&gt;&gt;\n  &lt;&lt;chandler-action-Done&gt;&gt;\n\\end\n\n\\define chandler-actions-Done()\n\\whitespace trim\n  &lt;&lt;chandler-action-Now&gt;&gt;\n  &lt;&lt;chandler-action-Later&gt;&gt;\n\\end\n\n\\define chandler-list(tag,state,filter:\&quot;sort[created]\&quot;,type:\&quot;ul\&quot;,subtype:\&quot;li\&quot;,class:\&quot;\&quot;,emptyMessage:\&quot;&lt;li&gt;//Nothing//&lt;/li&gt;\&quot;)\n\\whitespace trim\n&lt;$type$ class=\&quot;$class$\&quot;&gt;\n  &lt;$list filter=\&quot;[tag[$tag$]tag[$state$]$filter$]\&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;\n    &lt;$subtype$&gt;\n      &lt;$fieldmangler&gt;\n        &lt;$macrocall $name=\&quot;chandler-actions-$state$\&quot;/&gt;\n      &lt;/$fieldmangler&gt;\n      &lt;$text text=\&quot; \&quot;/&gt;\n      &lt;$link to={{!!title}}&gt;\n        &lt;$transclude field=\&quot;caption\&quot;&gt;\n          &lt;$view field=\&quot;title\&quot;/&gt;\n        &lt;/$transclude&gt;\n      &lt;/$link&gt;\n    &lt;/$subtype$&gt;\n  &lt;/$list&gt;\n&lt;/$type$&gt;\n\\end\n\n\\define chandler(tag,nowFilter:\&quot;sort[created]\&quot;,laterFilter:\&quot;sort[created]\&quot;,doneFilter:\&quot;has[modified]!sort[modified]limit[10]\&quot;)\n\\whitespace trim\n&lt;&lt;chandler-buttons tag:\&quot;$tag$\&quot;&gt;&gt;\n\n!! Now\n\n&lt;&lt;chandler-list tag:\&quot;$tag$\&quot; state:\&quot;Now\&quot; filter:\&quot;$nowFilter$\&quot;&gt;&gt;\n\n!! Later\n\n&lt;&lt;chandler-list tag:\&quot;$tag$\&quot; state:\&quot;Later\&quot; filter:\&quot;$laterFilter$\&quot;&gt;&gt;\n\n!! Done\n\n&lt;&lt;chandler-list tag:\&quot;$tag$\&quot; state:\&quot;Done\&quot; filter:\&quot;$doneFilter$\&quot;&gt;&gt;\n\\end&quot;
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/unindented/chandler/\n\n\\define chandler-button-Now(tag)\n\\whitespace trim\n&lt;$button&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=\&quot;[[$tag$]] Now\&quot;/&gt;\n  &lt;&lt;lingo Buttons/AddNow/text&gt;&gt;\n&lt;/$button&gt;\n\\end\n\n\\define chandler-button-Later(tag)\n\\whitespace trim\n&lt;$button&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=\&quot;[[$tag$]] Later\&quot;/&gt;\n  &lt;&lt;lingo Buttons/AddLater/text&gt;&gt;\n&lt;/$button&gt;\n\\end\n\n\\define chandler-buttons(tag)\n\\whitespace trim\n&lt;&lt;chandler-button-Now tag:\&quot;$tag$\&quot;&gt;&gt;&lt;$text text=\&quot; \&quot;/&gt;&lt;&lt;chandler-button-Later tag:\&quot;$tag$\&quot;&gt;&gt;\n\\end\n\n\\define chandler-action-Now()\n\\whitespace trim\n&lt;$button tooltip={{$:/language/unindented/chandler/Buttons/Now/tooltip}} aria-label={{$:/language/unindented/chandler/Buttons/Now/label}}&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;Now\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Later\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Done\&quot;/&gt;\n  {{$:/core/images/timestamp-on}}\n&lt;/$button&gt;\n\\end\n\n\\define chandler-action-Later()\n\\whitespace trim\n&lt;$button tooltip={{$:/language/unindented/chandler/Buttons/Later/tooltip}} aria-label={{$:/language/unindented/chandler/Buttons/Later/label}}&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Now\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;Later\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Done\&quot;/&gt;\n  {{$:/core/images/timestamp-off}}\n&lt;/$button&gt;\n\\end\n\n\\define chandler-action-Done()\n\\whitespace trim\n&lt;$button tooltip={{$:/language/unindented/chandler/Buttons/Done/tooltip}} aria-label={{$:/language/unindented/chandler/Buttons/Done/label}}&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Now\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-remove-tag\&quot; $param=\&quot;Later\&quot;/&gt;\n  &lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;Done\&quot;/&gt;\n  {{$:/core/images/done-button}}\n&lt;/$button&gt;\n\\end\n\n\\define chandler-actions-Now()\n\\whitespace trim\n  &lt;&lt;chandler-action-Later&gt;&gt;\n  &lt;&lt;chandler-action-Done&gt;&gt;\n\\end\n\n\\define chandler-actions-Later()\n\\whitespace trim\n  &lt;&lt;chandler-action-Now&gt;&gt;\n  &lt;&lt;chandler-action-Done&gt;&gt;\n\\end\n\n\\define chandler-actions-Done()\n\\whitespace trim\n  &lt;&lt;chandler-action-Now&gt;&gt;\n  &lt;&lt;chandler-action-Later&gt;&gt;\n\\end\n\n\\define chandler-list(tag,state,filter:\&quot;sort[created]\&quot;,type:\&quot;ul\&quot;,subtype:\&quot;li\&quot;,class:\&quot;\&quot;,emptyMessage:\&quot;&lt;li&gt;//&lt;&lt;lingo Lists/Empty/message&gt;&gt;//&lt;/li&gt;\&quot;)\n\\whitespace trim\n&lt;$type$ class=\&quot;$class$\&quot;&gt;\n  &lt;$list filter=\&quot;[tag[$tag$]tag[$state$]$filter$]\&quot; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt;&gt;\n    &lt;$subtype$&gt;\n      &lt;$fieldmangler&gt;\n        &lt;$macrocall $name=\&quot;chandler-actions-$state$\&quot;/&gt;\n      &lt;/$fieldmangler&gt;\n      &lt;$text text=\&quot; \&quot;/&gt;\n      &lt;$link to={{!!title}}&gt;\n        &lt;$transclude field=\&quot;caption\&quot;&gt;\n          &lt;$view field=\&quot;title\&quot;/&gt;\n        &lt;/$transclude&gt;\n      &lt;/$link&gt;\n    &lt;/$subtype$&gt;\n  &lt;/$list&gt;\n&lt;/$type$&gt;\n\\end\n\n\\define chandler(tag,nowFilter:\&quot;sort[created]\&quot;,laterFilter:\&quot;sort[created]\&quot;,doneFilter:\&quot;has[modified]!sort[modified]limit[10]\&quot;)\n\\whitespace trim\n&lt;&lt;chandler-buttons tag:\&quot;$tag$\&quot;&gt;&gt;\n\n!! &lt;&lt;lingo Lists/Now/title&gt;&gt;\n\n&lt;&lt;chandler-list tag:\&quot;$tag$\&quot; state:\&quot;Now\&quot; filter:\&quot;$nowFilter$\&quot;&gt;&gt;\n\n!! &lt;&lt;lingo Lists/Later/title&gt;&gt;\n\n&lt;&lt;chandler-list tag:\&quot;$tag$\&quot; state:\&quot;Later\&quot; filter:\&quot;$laterFilter$\&quot;&gt;&gt;\n\n!! &lt;&lt;lingo Lists/Done/title&gt;&gt;\n\n&lt;&lt;chandler-list tag:\&quot;$tag$\&quot; state:\&quot;Done\&quot; filter:\&quot;$doneFilter$\&quot;&gt;&gt;\n\\end&quot;
         },
         &quot;$:/plugins/unindented/chandler/readme&quot;: {
             &quot;title&quot;: &quot;$:/plugins/unindented/chandler/readme&quot;,
@@ -9736,7 +9784,7 @@ Error message and password prompt
         },
         &quot;$:/plugins/unindented/chandler/usage&quot;: {
             &quot;title&quot;: &quot;$:/plugins/unindented/chandler/usage&quot;,
-            &quot;text&quot;: &quot;Call the `chandler` macro from any tiddler, passing the tag you want to use for filtering. For example:\n\n```\n&lt;&lt;chandler tag:\&quot;To Read\&quot; sort:\&quot;title\&quot;&gt;&gt;\n```&quot;
+            &quot;text&quot;: &quot;Call the `chandler` macro from any tiddler, passing the tag you want to use for filtering. For example:\n\n```\n&lt;&lt;chandler tag:\&quot;To Read\&quot;&gt;&gt;\n```&quot;
         }
     }
 }</pre>
@@ -9877,28 +9925,121 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div author="Daniel Perez Alvarez" core-version="&gt;=5.1.0" dependents="$:/themes/tiddlywiki/vanilla" description="My own theme" name="Sine" plugin-type="theme" title="$:/themes/unindented/sine" type="application/json" version="5.1.22" revision="0" bag="default">
+<div author="Daniel Perez Alvarez" core-version="&gt;=5.1.0" dependents="$:/themes/tiddlywiki/vanilla" description="Theme with fluid typography, and light and dark palettes" name="Sine" plugin-type="theme" title="$:/themes/unindented/sine" type="application/json" version="5.1.22" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
-        &quot;$:/themes/unindented/sine/Database&quot;: {
-            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database&quot;,
-            &quot;type&quot;: &quot;application/x-tiddler-dictionary&quot;,
-            &quot;text&quot;: &quot;lightpalette: $:/themes/unindented/sine/palettes/Light\ndarkpalette: $:/themes/unindented/sine/palettes/Dark\n\nmaxfontsize: 20px\nmaxbodyfontsize: 20px\nminscreensize: 480px\nmaxscreensize: 1600px&quot;
+        &quot;$:/themes/unindented/sine/Config&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Config&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+            &quot;caption&quot;: &quot;{{$:/language/unindented/sine/Config/caption}}&quot;,
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/unindented/sine/Config/\n\n&lt;&lt;lingo description&gt;&gt;\n\n! Palettes\n\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/lightpalette\&quot;&gt;&lt;&lt;lingo lightpalette&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/lightpalette\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/darkpalette\&quot;&gt;&lt;&lt;lingo darkpalette&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/darkpalette\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n\n! Sizes\n\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxfontsize\&quot;&gt;&lt;&lt;lingo maxfontsize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxfontsize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxbodyfontsize\&quot;&gt;&lt;&lt;lingo maxbodyfontsize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxbodyfontsize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/minscreensize\&quot;&gt;&lt;&lt;lingo minscreensize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/minscreensize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxscreensize\&quot;&gt;&lt;&lt;lingo maxscreensize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxscreensize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |&quot;
+        },
+        &quot;$:/themes/unindented/sine/Database/lightpalette&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/lightpalette&quot;,
+            &quot;text&quot;: &quot;$:/themes/unindented/sine/palettes/Light&quot;
+        },
+        &quot;$:/themes/unindented/sine/Database/darkpalette&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/darkpalette&quot;,
+            &quot;text&quot;: &quot;$:/themes/unindented/sine/palettes/Dark&quot;
+        },
+        &quot;$:/themes/unindented/sine/Database/maxfontsize&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/maxfontsize&quot;,
+            &quot;text&quot;: &quot;19px&quot;
+        },
+        &quot;$:/themes/unindented/sine/Database/maxbodyfontsize&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/maxbodyfontsize&quot;,
+            &quot;text&quot;: &quot;20px&quot;
+        },
+        &quot;$:/themes/unindented/sine/Database/minscreensize&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/minscreensize&quot;,
+            &quot;text&quot;: &quot;480px&quot;
+        },
+        &quot;$:/themes/unindented/sine/Database/maxscreensize&quot;: {
+            &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/maxscreensize&quot;,
+            &quot;text&quot;: &quot;1600px&quot;
         },
         &quot;$:/themes/unindented/sine/Jumbotron&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/Jumbotron&quot;,
             &quot;tags&quot;: &quot;$:/tags/Jumbotron&quot;,
             &quot;text&quot;: &quot;&lt;h1&gt;{{$:/SiteTitle}}&lt;/h1&gt;&quot;
         },
+        &quot;$:/language/unindented/sine/Splash/text&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Splash/text&quot;,
+            &quot;text&quot;: &quot;{{$:/SiteTitle}} is loading...&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/caption&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/caption&quot;,
+            &quot;text&quot;: &quot;Sine Tweaks&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/description&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/description&quot;,
+            &quot;text&quot;: &quot;You can tweak certain aspects of the ''Sine'' theme.&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/lightpalette&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/lightpalette&quot;,
+            &quot;text&quot;: &quot;Light palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/darkpalette&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/darkpalette&quot;,
+            &quot;text&quot;: &quot;Dark palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/maxfontsize&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/maxfontsize&quot;,
+            &quot;text&quot;: &quot;Max font size&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/maxbodyfontsize&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/maxbodyfontsize&quot;,
+            &quot;text&quot;: &quot;Max font size for tiddler body&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/minscreensize&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/minscreensize&quot;,
+            &quot;text&quot;: &quot;Min screen size&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/maxscreensize&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/maxscreensize&quot;,
+            &quot;text&quot;: &quot;Max screen size&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/caption&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/caption&quot;,
+            &quot;text&quot;: &quot;palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/description&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/description&quot;,
+            &quot;text&quot;: &quot;Toggle between light and dark colour palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/light/text&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/light/text&quot;,
+            &quot;text&quot;: &quot;light&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/light/tooltip&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/light/tooltip&quot;,
+            &quot;text&quot;: &quot;Switch to light palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/light/label&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/light/label&quot;,
+            &quot;text&quot;: &quot;switch to light palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/text&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/text&quot;,
+            &quot;text&quot;: &quot;dark&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/tooltip&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/tooltip&quot;,
+            &quot;text&quot;: &quot;Switch to dark palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/label&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/label&quot;,
+            &quot;text&quot;: &quot;switch to dark palette&quot;
+        },
         &quot;$:/themes/unindented/sine/Macros&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/Macros&quot;,
             &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
-            &quot;text&quot;: &quot;\\define fluid-typography(selector:\&quot;html\&quot;)\n&lt;$vars\n  minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/fontsize}}\n  maxfontsize={{$:/themes/unindented/sine/Database##maxfontsize}}\n  minscreensize={{$:/themes/unindented/sine/Database##minscreensize}}\n  maxscreensize={{$:/themes/unindented/sine/Database##maxscreensize}}&gt;\n$selector$ {\n  font-size: &lt;&lt;minfontsize&gt;&gt;;\n}\n\n@media (min-width: &lt;&lt;minscreensize&gt;&gt;) {\n  $selector$ {\n    font-size: calc(\n      &lt;&lt;minfontsize&gt;&gt; +\n        (&lt;$text text={{{ [&lt;maxfontsize&gt;add[0]] }}}/&gt; - &lt;$text text={{{ [&lt;minfontsize&gt;add[0]] }}}/&gt;) *\n        (100vw - &lt;&lt;minscreensize&gt;&gt;) /\n        (&lt;$text text={{{ [&lt;maxscreensize&gt;add[0]] }}}/&gt; - &lt;$text text={{{ [&lt;minscreensize&gt;add[0]] }}}/&gt;)\n    );\n  }\n}\n\n@media (min-width: &lt;&lt;maxscreensize&gt;&gt;) {\n  $selector$ {\n    font-size: &lt;&lt;maxfontsize&gt;&gt;;\n  }\n}\n&lt;/$vars&gt;\n\\end\n&quot;
+            &quot;text&quot;: &quot;\\define fluid-typography(selector)\n$selector$ {\n  font-size: &lt;&lt;minfontsize&gt;&gt;;\n}\n\n@media (min-width: &lt;&lt;minscreensize&gt;&gt;) {\n  $selector$ {\n    font-size: calc(\n      &lt;&lt;minfontsize&gt;&gt; +\n        (&lt;$text text={{{ [&lt;maxfontsize&gt;add[0]] }}}/&gt; - &lt;$text text={{{ [&lt;minfontsize&gt;add[0]] }}}/&gt;) *\n        (100vw - &lt;&lt;minscreensize&gt;&gt;) /\n        (&lt;$text text={{{ [&lt;maxscreensize&gt;add[0]] }}}/&gt; - &lt;$text text={{{ [&lt;minscreensize&gt;add[0]] }}}/&gt;)\n    );\n  }\n}\n\n@media (min-width: &lt;&lt;maxscreensize&gt;&gt;) {\n  $selector$ {\n    font-size: &lt;&lt;maxfontsize&gt;&gt;;\n  }\n}\n\\end\n\n\\define fluid-typography-global(selector)\n&lt;$vars\n  minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/fontsize}}\n  maxfontsize={{$:/themes/unindented/sine/Database/maxfontsize}}\n  minscreensize={{$:/themes/unindented/sine/Database/minscreensize}}\n  maxscreensize={{$:/themes/unindented/sine/Database/maxscreensize}}&gt;\n&lt;&lt;fluid-typography selector:\&quot;$selector$\&quot;&gt;&gt;\n&lt;/$vars&gt;\n\\end\n\n\\define fluid-typography-body(selector)\n&lt;$vars\n  minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize}}\n  maxfontsize={{$:/themes/unindented/sine/Database/maxbodyfontsize}}\n  minscreensize={{$:/themes/unindented/sine/Database/minscreensize}}\n  maxscreensize={{$:/themes/unindented/sine/Database/maxscreensize}}&gt;\n&lt;&lt;fluid-typography selector:\&quot;$selector$\&quot;&gt;&gt;\n&lt;/$vars&gt;\n\\end\n&quot;
         },
         &quot;$:/themes/unindented/sine/Splash&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/Splash&quot;,
             &quot;tags&quot;: &quot;$:/tags/RawMarkupWikified/TopBody&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n&lt;div class=\&quot;tc-remove-when-wiki-loaded\&quot;&gt;\n  &lt;style scoped&gt;\n    html {\n      font-family: {{$:/themes/tiddlywiki/vanilla/settings/fontfamily}};\n      line-height: {{$:/themes/tiddlywiki/vanilla/metrics/lineheight}};\n      text-rendering: optimizeLegibility; /* Enables kerning and ligatures etc. */\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;\n    }\n\n    &lt;&lt;fluid-typography selector:\&quot;html\&quot;&gt;&gt;\n\n    body.tc-body {\n      background-color: &lt;&lt;colour background&gt;&gt;;\n      color: &lt;&lt;colour foreground&gt;&gt;;\n      fill: &lt;&lt;colour foreground&gt;&gt;;\n      font-size: inherit;\n      line-height: inherit;\n    }\n\n    .tc-splash-text {\n      margin-top: 1em;\n    }\n\n    .splash {\n      align-items: center;\n      display: flex;\n      flex-direction: column;\n      height: 80vh;\n      justify-content: center;\n    }\n    .splash::before {\n      border: .25em solid transparent;\n      border-bottom-color: &lt;&lt;colour muted-foreground&gt;&gt;;\n      border-top-color: &lt;&lt;colour muted-foreground&gt;&gt;;\n      border-radius: 50%;\n      content: '';\n      height: 2em;\n      width: 2em;\n      animation: spinner 1s linear infinite;\n    }\n\n    @keyframes spinner {\n      to { transform: rotate(360deg); }\n    }\n  &lt;/style&gt;\n\n  &lt;div class=\&quot;splash\&quot;&gt;\n    &lt;div class=\&quot;tc-splash-text\&quot;&gt;\n      {{$:/SiteTitle}} is loading...\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;&quot;
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n\\define lingo-base() $:/language/unindented/sine/Splash/\n\n&lt;div class=\&quot;tc-remove-when-wiki-loaded\&quot;&gt;\n  &lt;style scoped&gt;\n    html {\n      font-family: {{$:/themes/tiddlywiki/vanilla/settings/fontfamily}};\n      line-height: {{$:/themes/tiddlywiki/vanilla/metrics/lineheight}};\n      text-rendering: optimizeLegibility; /* Enables kerning and ligatures etc. */\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;\n    }\n\n    &lt;&lt;fluid-typography-global selector:\&quot;html\&quot;&gt;&gt;\n\n    body.tc-body {\n      background-color: &lt;&lt;colour background&gt;&gt;;\n      color: &lt;&lt;colour foreground&gt;&gt;;\n      fill: &lt;&lt;colour foreground&gt;&gt;;\n      font-size: inherit;\n      line-height: inherit;\n    }\n\n    .tc-splash-text {\n      margin-top: 1em;\n    }\n\n    .splash {\n      align-items: center;\n      display: flex;\n      flex-direction: column;\n      height: 80vh;\n      justify-content: center;\n    }\n    .splash::before {\n      border: .25em solid transparent;\n      border-bottom-color: &lt;&lt;colour muted-foreground&gt;&gt;;\n      border-top-color: &lt;&lt;colour muted-foreground&gt;&gt;;\n      border-radius: 50%;\n      content: '';\n      height: 2em;\n      width: 2em;\n      animation: spinner 1s linear infinite;\n    }\n\n    @keyframes spinner {\n      to { transform: rotate(360deg); }\n    }\n  &lt;/style&gt;\n\n  &lt;div class=\&quot;splash\&quot;&gt;\n    &lt;div class=\&quot;tc-splash-text\&quot;&gt;\n      &lt;&lt;lingo text&gt;&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;&quot;
         },
         &quot;$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-title&quot;: {
             &quot;title&quot;: &quot;$:/config/SideBarSegments/Visibility/$:/core/ui/SideBarSegments/site-title&quot;,
@@ -9910,7 +10051,7 @@ Error message and password prompt
         },
         &quot;$:/themes/tiddlywiki/vanilla/metrics/fontsize&quot;: {
             &quot;title&quot;: &quot;$:/themes/tiddlywiki/vanilla/metrics/fontsize&quot;,
-            &quot;text&quot;: &quot;16px&quot;
+            &quot;text&quot;: &quot;15px&quot;
         },
         &quot;$:/themes/tiddlywiki/vanilla/metrics/lineheight&quot;: {
             &quot;title&quot;: &quot;$:/themes/tiddlywiki/vanilla/metrics/lineheight&quot;,
@@ -9959,7 +10100,7 @@ Error message and password prompt
         &quot;$:/themes/unindented/sine/stylesheets/Highlight&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/stylesheets/Highlight&quot;,
             &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n.hljs {\n\tbackground-color: &lt;&lt;colour pre-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour pre-border&gt;&gt;;\n\tborder-radius: 3px;\n  color: &lt;&lt;colour foreground&gt;&gt;;\n\tfont-family: {{$:/themes/tiddlywiki/vanilla/settings/codefontfamily}};\n\tpadding: 14px;\n}\n.hljs-code,\n.hljs-meta-keyword,\n.hljs-meta-string,\n.hljs-selector-attr,\n.hljs-selector-class,\n.hljs-selector-pseudo,\n.hljs-template-tag {\n  color: &lt;&lt;colour foreground&gt;&gt;;\n}\n.hljs-comment,\n.hljs-quote {\n  color: &lt;&lt;colour highlight-comment&gt;&gt;;\n  font-style: italic;\n}\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-subst {\n  color: &lt;&lt;colour highlight-keyword&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-number,\n.hljs-literal,\n.hljs-variable,\n.hljs-template-variable,\n.hljs-tag .hljs-attr {\n  color: &lt;&lt;colour highlight-number&gt;&gt;;\n}\n.hljs-string,\n.hljs-doctag {\n  color: &lt;&lt;colour highlight-string&gt;&gt;;\n}\n.hljs-title,\n.hljs-section,\n.hljs-selector-id {\n  color: &lt;&lt;colour highlight-title&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-subst {\n  font-weight: normal;\n}\n.hljs-type,\n.hljs-class .hljs-title {\n  color: &lt;&lt;colour highlight-type&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-tag,\n.hljs-name,\n.hljs-attribute {\n  color: &lt;&lt;colour highlight-tag&gt;&gt;;\n  font-weight: normal;\n}\n.hljs-regexp,\n.hljs-link {\n  color: &lt;&lt;colour highlight-regexp&gt;&gt;;\n}\n.hljs-symbol,\n.hljs-bullet {\n  color: &lt;&lt;colour highlight-symbol&gt;&gt;;\n}\n.hljs-built_in,\n.hljs-builtin-name {\n  color: &lt;&lt;colour highlight-built-in&gt;&gt;;\n}\n.hljs-meta {\n  color: &lt;&lt;colour highlight-meta&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-addition {\n  background: &lt;&lt;colour highlight-addition&gt;&gt;;\n}\n.hljs-deletion {\n  background: &lt;&lt;colour highlight-deletion&gt;&gt;;\n}\n.hljs-emphasis {\n  font-style: italic;\n}\n.hljs-strong {\n  font-weight: bold;\n}&quot;
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n.hljs {\n\tbackground-color: &lt;&lt;colour pre-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour pre-border&gt;&gt;;\n\tborder-radius: 3px;\n  color: &lt;&lt;colour foreground&gt;&gt;;\n\tfont-family: {{$:/themes/tiddlywiki/vanilla/settings/codefontfamily}};\n\tpadding: 14px;\n}\n.hljs-code,\n.hljs-selector-attr,\n.hljs-selector-pseudo,\n.hljs-subst,\n.hljs-template-tag {\n  color: &lt;&lt;colour foreground&gt;&gt;;\n  font-weight: normal;\n}\n.hljs-comment,\n.hljs-quote {\n  color: &lt;&lt;colour highlight-comment&gt;&gt;;\n  font-style: italic;\n}\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-subst {\n  color: &lt;&lt;colour highlight-keyword&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-number,\n.hljs-literal,\n.hljs-template-variable,\n.hljs-variable,\n.hljs-tag .hljs-attr {\n  color: &lt;&lt;colour highlight-number&gt;&gt;;\n}\n.hljs-doctag,\n.hljs-string {\n  color: &lt;&lt;colour highlight-string&gt;&gt;;\n}\n.hljs-section,\n.hljs-selector-class,\n.hljs-selector-id,\n.hljs-title {\n  color: &lt;&lt;colour highlight-title&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-type,\n.hljs-class .hljs-title {\n  color: &lt;&lt;colour highlight-type&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-attribute,\n.hljs-name,\n.hljs-tag {\n  color: &lt;&lt;colour highlight-tag&gt;&gt;;\n  font-weight: normal;\n}\n.hljs-link,\n.hljs-regexp {\n  color: &lt;&lt;colour highlight-regexp&gt;&gt;;\n}\n.hljs-bullet,\n.hljs-symbol {\n  color: &lt;&lt;colour highlight-symbol&gt;&gt;;\n}\n.hljs-built_in,\n.hljs-builtin-name {\n  color: &lt;&lt;colour highlight-built-in&gt;&gt;;\n}\n.hljs-meta,\n.hljs-meta-keyword,\n.hljs-meta-string {\n  color: &lt;&lt;colour highlight-meta&gt;&gt;;\n  font-weight: bold;\n}\n.hljs-addition {\n  background: &lt;&lt;colour highlight-addition&gt;&gt;;\n}\n.hljs-deletion {\n  background: &lt;&lt;colour highlight-deletion&gt;&gt;;\n}\n.hljs-emphasis {\n  font-style: italic;\n}\n.hljs-strong {\n  font-weight: bold;\n}&quot;
         },
         &quot;$:/themes/unindented/sine/stylesheets/Jumbotron&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/stylesheets/Jumbotron&quot;,
@@ -9969,15 +10110,15 @@ Error message and password prompt
         &quot;$:/themes/unindented/sine/stylesheets/Main&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/stylesheets/Main&quot;,
             &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n&lt;&lt;fluid-typography selector:\&quot;html\&quot;&gt;&gt;\n\nbody.tc-body,\nbody.tc-body .tc-tiddler-frame .tc-tiddler-body {\n  font-size: inherit;\n}\n\n/* Adjusted from Seamless theme */\nhtml body.tc-body {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nhtml:-webkit-full-screen {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-tiddler-frame {\n  border: 0;\n  padding: 0 14px;\n  margin-bottom: 58px;\n}\nbody.tc-body .tc-tiddler-info {\n  border: 0;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n/* Give a bit more space to title icons */\nbody.tc-body .tc-tiddler-title-icon {\n  margin-right: 10px;\n}\n\n/* Increase size of title icons */\nbody.tc-body .tc-tiddler-title-icon svg {\n  height: .9em;\n  width: 1em;\n}\n\n/* Hide empty title icons so that title aligns with body */\nbody.tc-body .tc-tiddler-title-icon:empty {\n  display: none;\n}\n\n/* Reposition top bar elements */\nbody.tc-body .tc-topbar-left {\n  top: 5px;\n  left: 5px;\n}\nbody.tc-body .tc-topbar-right {\n  top: 5px;\n  right: 5px;\n}\n\n/* Align page control buttons with tiddler control buttons */\nbody.tc-body .tc-page-controls {\n  font-size: 2.35em;\n  line-height: 1.2em;\n  margin-top: calc(-1em / 2.35);\n}\nbody.tc-body .tc-page-controls button {\n  margin-right: 5px;\n}\nbody.tc-body .tc-page-controls button svg.tc-image-button,\nbody.tc-body .tc-page-controls button .tc-image-button img {\n  height: .75em;\n}\n\n/* Fix alignment of search dropdown */\nbody.tc-body .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n}\n\n/* Let menu list items wrap normally */\nbody.tc-body .tc-menu-list-item {\n  white-space: normal;\n}\n\n/* Change the vertical alignment of the menu list mini buttons */\nbody.tc-body .tc-sidebar-lists button.tc-btn-mini {\n  vertical-align: text-bottom;\n}\n\n/* Change the color of the menu list mini buttons */\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini:hover svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground-hover&gt;&gt;;\n}\n\n/* Increase padding of menu list subitems */\nbody.tc-body .tc-menu-list-subitem {\n  padding-left: 14px;\n}\n\nbody.tc-body .tc-remove-tag-button {\n  fill: &lt;&lt;colour tag-foreground&gt;&gt;;\n}\n\n/* Increase padding for draft indicators */\nbody.tc-body .tc-drafts-list a {\n  padding: 14px;\n}\n\n/* Reset the font weight for these things */\nh1, h2, h3, h4, h5, h6,\nbody.tc-body a.tc-tiddlylink,\nbody.tc-body button.tc-tiddlylink {\n  font-weight: 400;\n}\n\n/* Add indicator to external links */\nbody.tc-body .tc-tiddlylink-external::after {\n  content: ' ↗';\n}\n\n/* Uniformize backgrounds and borders */\nhtml button,\nselect {\n  border: 1px solid &lt;&lt;colour button-border&gt;&gt;;\n}\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]) {\n\tbackground-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour tiddler-editor-border&gt;&gt;;\n}\nhtml button,\nselect,\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]),\n.tc-drop-down {\n  border-radius: 2px;\n}\n.tc-alert,\n.tc-notification {\n  border-radius: 6px;\n}\n\n/* Fix padding of some blocks */\nblockquote {\n  padding-left: 0;\n}\npre {\n  padding: 14px;\n}\n\n@media (hover: hover) {\n\n  /* Hide tiddler controls until hover */\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {\n    opacity: 0;\n    &lt;&lt;transition \&quot;opacity 150ms ease-in-out\&quot;&gt;&gt;\n  }\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$=\&quot;%2Fcore%2Fui%2FButtons%2Fclose\&quot;],\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {\n    opacity: 1;\n  }\n\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n  /* Adjusted from Seamless theme */\n  body.tc-body .tc-tiddler-frame {\n    padding: 0;\n  }\n  body.tc-body .tc-tiddler-info {\n    margin: 0;\n  }\n  body.tc-body .tc-message-box {\n    margin: 21px 0 21px 0;\n  }\n\n  /* Align page control buttons with tiddler control buttons */\n  body.tc-body .tc-sidebar-scrollable {\n    padding: 42px 0 28px 42px;\n  }\n  body.tc-body .tc-sidebar-header {\n    padding: 0;\n  }\n\n}&quot;
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n/* Implement fluid typography */\n&lt;&lt;fluid-typography-global selector:\&quot;html\&quot;&gt;&gt;\n&lt;&lt;fluid-typography-body selector:\&quot;body.tc-body .tc-tiddler-frame .tc-tiddler-body\&quot;&gt;&gt;\nbody.tc-body {\n  font-size: inherit;\n}\n\n/* Adjusted from Seamless theme */\nhtml body.tc-body {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nhtml:-webkit-full-screen {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-tiddler-frame {\n  border: 0;\n  padding: 0 14px;\n  margin-bottom: 58px;\n}\nbody.tc-body .tc-tiddler-info {\n  border: 0;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n/* Give a bit more space to title icons */\nbody.tc-body .tc-tiddler-title-icon {\n  margin-right: 10px;\n}\n\n/* Increase size of title icons */\nbody.tc-body .tc-tiddler-title-icon svg {\n  height: .9em;\n  width: 1em;\n}\n\n/* Hide empty title icons so that title aligns with body */\nbody.tc-body .tc-tiddler-title-icon:empty {\n  display: none;\n}\n\n/* Reposition top bar elements */\nbody.tc-body .tc-topbar-left {\n  top: 5px;\n  left: 5px;\n}\nbody.tc-body .tc-topbar-right {\n  top: 5px;\n  right: 5px;\n}\n\n/* Align page control buttons with tiddler control buttons */\nbody.tc-body .tc-page-controls {\n  font-size: 2.35em;\n  line-height: 1.2em;\n  margin-top: calc(-1em / 2.35);\n}\nbody.tc-body .tc-page-controls button {\n  margin-right: 5px;\n}\nbody.tc-body .tc-page-controls button svg.tc-image-button,\nbody.tc-body .tc-page-controls button .tc-image-button img {\n  height: .75em;\n}\n\n/* Fix alignment of search dropdown */\nbody.tc-body .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n}\n\n/* Let menu list items wrap normally */\nbody.tc-body .tc-menu-list-item {\n  white-space: normal;\n}\n\n/* Change the vertical alignment of the menu list mini buttons */\nbody.tc-body .tc-sidebar-lists button.tc-btn-mini {\n  vertical-align: text-bottom;\n}\n\n/* Change the color of the menu list mini buttons */\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini:hover svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground-hover&gt;&gt;;\n}\n\n/* Increase padding of menu list subitems */\nbody.tc-body .tc-menu-list-subitem {\n  padding-left: 14px;\n}\n\nbody.tc-body .tc-remove-tag-button {\n  fill: &lt;&lt;colour tag-foreground&gt;&gt;;\n}\n\n/* Increase padding for draft indicators */\nbody.tc-body .tc-drafts-list a {\n  padding: 14px;\n}\n\n/* Reset the font weight for these things */\nh1, h2, h3, h4, h5, h6,\nbody.tc-body a.tc-tiddlylink,\nbody.tc-body button.tc-tiddlylink {\n  font-weight: 400;\n}\n\n/* Add indicator to external links */\nbody.tc-body .tc-tiddlylink-external::after {\n  content: ' ↗';\n}\n\n/* Uniformize backgrounds and borders */\nhtml button,\nselect {\n  border: 1px solid &lt;&lt;colour button-border&gt;&gt;;\n}\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]) {\n\tbackground-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour tiddler-editor-border&gt;&gt;;\n}\nhtml button,\nselect,\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]),\n.tc-drop-down {\n  border-radius: 2px;\n}\n.tc-alert,\n.tc-notification {\n  border-radius: 6px;\n}\n\n/* Fix padding of some blocks */\nblockquote {\n  padding-left: 0;\n}\npre {\n  padding: 14px;\n}\n\n@media (hover: hover) {\n\n  /* Hide tiddler controls until hover */\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {\n    opacity: 0;\n    &lt;&lt;transition \&quot;opacity 150ms ease-in-out\&quot;&gt;&gt;\n  }\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$=\&quot;%2Fcore%2Fui%2FButtons%2Fclose\&quot;],\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {\n    opacity: 1;\n  }\n\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n  /* Adjusted from Seamless theme */\n  body.tc-body .tc-tiddler-frame {\n    padding: 0;\n  }\n  body.tc-body .tc-tiddler-info {\n    margin: 0;\n  }\n  body.tc-body .tc-message-box {\n    margin: 21px 0 21px 0;\n  }\n\n  /* Align page control buttons with tiddler control buttons */\n  body.tc-body .tc-sidebar-scrollable {\n    padding: 42px 0 28px 42px;\n  }\n  body.tc-body .tc-sidebar-header {\n    padding: 0;\n  }\n\n}&quot;
         },
         &quot;$:/themes/unindented/sine/ui/Buttons/palette-switcher&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/ui/Buttons/palette-switcher&quot;,
             &quot;tags&quot;: &quot;$:/tags/PageControls&quot;,
             &quot;list-before&quot;: &quot;$:/core/ui/Buttons/palette&quot;,
-            &quot;caption&quot;: &quot;{{$:/core/images/tip}} palette&quot;,
-            &quot;description&quot;: &quot;Toggle between light and dark colour palette&quot;,
-            &quot;text&quot;: &quot;\\whitespace trim\n&lt;$list filter=\&quot;[[$:/palette]!text{$:/themes/unindented/sine/Database##darkpalette}]\&quot;&gt;\n  &lt;$button set=\&quot;$:/palette\&quot; setTo={{$:/themes/unindented/sine/Database##darkpalette}} tooltip=\&quot;Switch to dark palette\&quot; aria-label=\&quot;switch to dark palette\&quot; class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]\&quot;&gt;\n      {{$:/core/images/tip}}\n    &lt;/$list&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]\&quot;&gt;\n      &lt;span class=\&quot;tc-btn-text\&quot;&gt;\n        &lt;$text text=\&quot; \&quot;/&gt;\n        &lt;$text text=\&quot;dark\&quot;/&gt;\n      &lt;/span&gt;\n    &lt;/$list&gt;\n  &lt;/$button&gt;\n&lt;/$list&gt;\n&lt;$list filter=\&quot;[[$:/palette]text{$:/themes/unindented/sine/Database##darkpalette}]\&quot;&gt;\n  &lt;$button set=\&quot;$:/palette\&quot; setTo={{$:/themes/unindented/sine/Database##lightpalette}} tooltip=\&quot;Switch to light palette\&quot; aria-label=\&quot;switch to light palette\&quot; class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]\&quot;&gt;\n      {{$:/core/images/tip}}\n    &lt;/$list&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]\&quot;&gt;\n      &lt;span class=\&quot;tc-btn-text\&quot;&gt;\n        &lt;$text text=\&quot; \&quot;/&gt;\n        &lt;$text text=\&quot;light\&quot;/&gt;\n      &lt;/span&gt;\n    &lt;/$list&gt;\n  &lt;/$button&gt;\n&lt;/$list&gt;&quot;
+            &quot;caption&quot;: &quot;{{$:/core/images/tip}} {{$:/language/unindented/sine/Buttons/PaletteSwitcher/caption}}&quot;,
+            &quot;description&quot;: &quot;{{$:/language/unindented/sine/Buttons/PaletteSwitcher/description}}&quot;,
+            &quot;text&quot;: &quot;\\whitespace trim\n&lt;$list filter=\&quot;[[$:/palette]!text{$:/themes/unindented/sine/Database/darkpalette}]\&quot;&gt;\n  &lt;$button set=\&quot;$:/palette\&quot; setTo={{$:/themes/unindented/sine/Database/darkpalette}} tooltip={{$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/tooltip}} aria-label={{$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/label}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]\&quot;&gt;\n      {{$:/core/images/tip}}\n    &lt;/$list&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]\&quot;&gt;\n      &lt;span class=\&quot;tc-btn-text\&quot;&gt;\n        &lt;$text text=\&quot; \&quot;/&gt;\n        {{$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/text}}\n      &lt;/span&gt;\n    &lt;/$list&gt;\n  &lt;/$button&gt;\n&lt;/$list&gt;\n&lt;$list filter=\&quot;[[$:/palette]text{$:/themes/unindented/sine/Database/darkpalette}]\&quot;&gt;\n  &lt;$button set=\&quot;$:/palette\&quot; setTo={{$:/themes/unindented/sine/Database/lightpalette}} tooltip={{$:/language/unindented/sine/Buttons/PaletteSwitcher/light/tooltip}} aria-label={{$:/language/unindented/sine/Buttons/PaletteSwitcher/light/label}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]\&quot;&gt;\n      {{$:/core/images/tip}}\n    &lt;/$list&gt;\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]\&quot;&gt;\n      &lt;span class=\&quot;tc-btn-text\&quot;&gt;\n        &lt;$text text=\&quot; \&quot;/&gt;\n        {{$:/language/unindented/sine/Buttons/PaletteSwitcher/light/text}}\n      &lt;/span&gt;\n    &lt;/$list&gt;\n  &lt;/$button&gt;\n&lt;/$list&gt;&quot;
         },
         &quot;$:/themes/unindented/sine/ui/PageTemplate/jumbotron&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/ui/PageTemplate/jumbotron&quot;,
@@ -10045,7 +10186,7 @@ class Program {
 !! CSS
 
 ```css
-body:before {
+body::before {
   content: &quot;Hello, world!&quot;;
 }
 ```
