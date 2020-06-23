@@ -218,6 +218,8 @@ Error message and password prompt
 
 <li>$:/plugins/unindented/chandler</li>
 
+<li>$:/plugins/unindented/hidesidebar</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
@@ -9789,6 +9791,47 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div author="Daniel Perez Alvarez" core-version="&gt;=5.1.0" dependents="" description="Automatically hide the sidebar on narrow screens" list="readme" name="Hide Sidebar" plugin-type="plugin" title="$:/plugins/unindented/hidesidebar" type="application/json" version="5.1.22" revision="0" bag="default">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/unindented/hidesidebar/Config&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/unindented/hidesidebar/Config&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+            &quot;caption&quot;: &quot;{{$:/language/unindented/hidesidebar/Config/caption}}&quot;,
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/unindented/hidesidebar/Config/\n\n&lt;&lt;lingo description&gt;&gt;\n\n! &lt;&lt;lingo sizes&gt;&gt;\n\n|&lt;$link to=\&quot;$:/plugins/unindented/hidesidebar/Database/breakpoint\&quot;&gt;&lt;&lt;lingo breakpoint&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/plugins/unindented/hidesidebar/Database/breakpoint\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |&quot;
+        },
+        &quot;$:/plugins/unindented/hidesidebar/Database/breakpoint&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/unindented/hidesidebar/Database/breakpoint&quot;,
+            &quot;text&quot;: &quot;960&quot;
+        },
+        &quot;$:/language/unindented/hidesidebar/Config/caption&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/hidesidebar/Config/caption&quot;,
+            &quot;text&quot;: &quot;Hide Sidebar&quot;
+        },
+        &quot;$:/language/unindented/hidesidebar/Config/description&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/hidesidebar/Config/description&quot;,
+            &quot;text&quot;: &quot;Hide sidebar on startup if screen size is below breakpoint.&quot;
+        },
+        &quot;$:/language/unindented/hidesidebar/Config/sizes&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/hidesidebar/Config/sizes&quot;,
+            &quot;text&quot;: &quot;Sizes&quot;
+        },
+        &quot;$:/language/unindented/hidesidebar/Config/breakpoint&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/hidesidebar/Config/breakpoint&quot;,
+            &quot;text&quot;: &quot;Breakpoint&quot;
+        },
+        &quot;$:/plugins/unindented/hidesidebar/Startup&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/unindented/hidesidebar/Startup&quot;,
+            &quot;tags&quot;: &quot;$:/tags/StartupAction/Browser&quot;,
+            &quot;text&quot;: &quot;&lt;$reveal type=\&quot;lt\&quot; state=\&quot;$:/info/browser/screen/width\&quot; text=\&quot;960\&quot;&gt;\n  &lt;$action-setfield $tiddler=\&quot;$:/state/sidebar\&quot; $value=\&quot;no\&quot;/&gt;\n&lt;/$reveal&gt;\n\n&lt;$reveal type=\&quot;gteq\&quot; state=\&quot;$:/info/browser/screen/width\&quot; text=\&quot;960\&quot;&gt;\n  &lt;$action-setfield $tiddler=\&quot;$:/state/sidebar\&quot; $value=\&quot;yes\&quot;/&gt;\n&lt;/$reveal&gt;&quot;
+        },
+        &quot;$:/plugins/unindented/hidesidebar/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/unindented/hidesidebar/readme&quot;,
+            &quot;text&quot;: &quot;Plugin that hides the sidebar on startup for narrow screens.&quot;
+        }
+    }
+}</pre>
+</div>
 <div title="$:/SiteSubtitle" revision="0" bag="default">
 <pre>A demo site for my TiddlyWiki5 plugins and themes</pre>
 </div>
@@ -9932,7 +9975,7 @@ Error message and password prompt
             &quot;title&quot;: &quot;$:/themes/unindented/sine/Config&quot;,
             &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
             &quot;caption&quot;: &quot;{{$:/language/unindented/sine/Config/caption}}&quot;,
-            &quot;text&quot;: &quot;\\define lingo-base() $:/language/unindented/sine/Config/\n\n&lt;&lt;lingo description&gt;&gt;\n\n! Palettes\n\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/lightpalette\&quot;&gt;&lt;&lt;lingo lightpalette&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/lightpalette\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/darkpalette\&quot;&gt;&lt;&lt;lingo darkpalette&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/darkpalette\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n\n! Sizes\n\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxfontsize\&quot;&gt;&lt;&lt;lingo maxfontsize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxfontsize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxbodyfontsize\&quot;&gt;&lt;&lt;lingo maxbodyfontsize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxbodyfontsize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/minscreensize\&quot;&gt;&lt;&lt;lingo minscreensize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/minscreensize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxscreensize\&quot;&gt;&lt;&lt;lingo maxscreensize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxscreensize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |&quot;
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/unindented/sine/Config/\n\n&lt;&lt;lingo description&gt;&gt;\n\n! &lt;&lt;lingo palettes&gt;&gt;\n\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/lightpalette\&quot;&gt;&lt;&lt;lingo lightpalette&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/lightpalette\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/darkpalette\&quot;&gt;&lt;&lt;lingo darkpalette&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/darkpalette\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n\n! &lt;&lt;lingo sizes&gt;&gt;\n\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxfontsize\&quot;&gt;&lt;&lt;lingo maxfontsize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxfontsize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxbodyfontsize\&quot;&gt;&lt;&lt;lingo maxbodyfontsize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxbodyfontsize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/minscreensize\&quot;&gt;&lt;&lt;lingo minscreensize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/minscreensize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |\n|&lt;$link to=\&quot;$:/themes/unindented/sine/Database/maxscreensize\&quot;&gt;&lt;&lt;lingo maxscreensize&gt;&gt;&lt;/$link&gt; |&lt;$edit-text tiddler=\&quot;$:/themes/unindented/sine/Database/maxscreensize\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt; |&quot;
         },
         &quot;$:/themes/unindented/sine/Database/lightpalette&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/Database/lightpalette&quot;,
@@ -9975,6 +10018,10 @@ Error message and password prompt
             &quot;title&quot;: &quot;$:/language/unindented/sine/Config/description&quot;,
             &quot;text&quot;: &quot;You can tweak certain aspects of the ''Sine'' theme.&quot;
         },
+        &quot;$:/language/unindented/sine/Config/palettes&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/palettes&quot;,
+            &quot;text&quot;: &quot;Palettes&quot;
+        },
         &quot;$:/language/unindented/sine/Config/lightpalette&quot;: {
             &quot;title&quot;: &quot;$:/language/unindented/sine/Config/lightpalette&quot;,
             &quot;text&quot;: &quot;Light palette&quot;
@@ -9982,6 +10029,10 @@ Error message and password prompt
         &quot;$:/language/unindented/sine/Config/darkpalette&quot;: {
             &quot;title&quot;: &quot;$:/language/unindented/sine/Config/darkpalette&quot;,
             &quot;text&quot;: &quot;Dark palette&quot;
+        },
+        &quot;$:/language/unindented/sine/Config/sizes&quot;: {
+            &quot;title&quot;: &quot;$:/language/unindented/sine/Config/sizes&quot;,
+            &quot;text&quot;: &quot;Sizes&quot;
         },
         &quot;$:/language/unindented/sine/Config/maxfontsize&quot;: {
             &quot;title&quot;: &quot;$:/language/unindented/sine/Config/maxfontsize&quot;,
@@ -10110,7 +10161,7 @@ Error message and password prompt
         &quot;$:/themes/unindented/sine/stylesheets/Main&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/stylesheets/Main&quot;,
             &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n/* Implement fluid typography */\n&lt;&lt;fluid-typography-global selector:\&quot;html\&quot;&gt;&gt;\n&lt;&lt;fluid-typography-body selector:\&quot;body.tc-body .tc-tiddler-frame .tc-tiddler-body\&quot;&gt;&gt;\nbody.tc-body {\n  font-size: inherit;\n}\n\n/* Adjusted from Seamless theme */\nhtml body.tc-body {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nhtml:-webkit-full-screen {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-tiddler-frame {\n  border: 0;\n  padding: 0 14px;\n  margin-bottom: 58px;\n}\nbody.tc-body .tc-tiddler-info {\n  border: 0;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n/* Give a bit more space to title icons */\nbody.tc-body .tc-tiddler-title-icon {\n  margin-right: 10px;\n}\n\n/* Increase size of title icons */\nbody.tc-body .tc-tiddler-title-icon svg {\n  height: .9em;\n  width: 1em;\n}\n\n/* Hide empty elements so that title and subtitle align with body */\nbody.tc-body .tc-titlebar .tc-tiddler-title-icon:empty,\nbody.tc-body .tc-subtitle &gt; .tc-tiddlylink:empty {\n  margin-right: 0;\n}\n\n/* Reposition top bar elements */\nbody.tc-body .tc-topbar-left {\n  top: 5px;\n  left: 5px;\n}\nbody.tc-body .tc-topbar-right {\n  top: 5px;\n  right: 5px;\n}\n\n/* Align page control buttons with tiddler control buttons */\nbody.tc-body .tc-page-controls {\n  font-size: 2.35em;\n  line-height: 1.2em;\n  margin-top: calc(-1em / 2.35);\n}\nbody.tc-body .tc-page-controls button {\n  margin-right: 5px;\n}\nbody.tc-body .tc-page-controls button svg.tc-image-button,\nbody.tc-body .tc-page-controls button .tc-image-button img {\n  height: .75em;\n}\n\n/* Fix alignment of search dropdown */\nbody.tc-body .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n}\n\n/* Let menu list items wrap normally */\nbody.tc-body .tc-menu-list-item {\n  white-space: normal;\n}\n\n/* Change the vertical alignment of the menu list mini buttons */\nbody.tc-body .tc-sidebar-lists button.tc-btn-mini {\n  vertical-align: text-bottom;\n}\n\n/* Change the color of the menu list mini buttons */\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini:hover svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground-hover&gt;&gt;;\n}\n\n/* Increase padding of menu list subitems */\nbody.tc-body .tc-menu-list-subitem {\n  padding-left: 14px;\n}\n\nbody.tc-body .tc-remove-tag-button {\n  fill: &lt;&lt;colour tag-foreground&gt;&gt;;\n}\n\n/* Increase padding for draft indicators */\nbody.tc-body .tc-drafts-list a {\n  padding: 14px;\n}\n\n/* Reset the font weight for these things */\nh1, h2, h3, h4, h5, h6,\nbody.tc-body a.tc-tiddlylink,\nbody.tc-body button.tc-tiddlylink {\n  font-weight: 400;\n}\n\n/* Add indicator to external links */\nbody.tc-body .tc-tiddlylink-external::after {\n  content: ' ↗';\n}\n\n/* Uniformize backgrounds and borders */\nhtml button,\nselect {\n  border: 1px solid &lt;&lt;colour button-border&gt;&gt;;\n}\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]) {\n\tbackground-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour tiddler-editor-border&gt;&gt;;\n}\nhtml button,\nselect,\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]),\n.tc-drop-down {\n  border-radius: 2px;\n}\n.tc-alert,\n.tc-notification {\n  border-radius: 6px;\n}\n\n/* Fix padding of some blocks */\nblockquote {\n  margin-left: 0;\n}\npre {\n  padding: 14px;\n}\n\n@media (hover: hover) {\n\n  /* Hide tiddler controls until hover */\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {\n    opacity: 0;\n    &lt;&lt;transition \&quot;opacity 150ms ease-in-out\&quot;&gt;&gt;\n  }\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$=\&quot;%2Fcore%2Fui%2FButtons%2Fclose\&quot;],\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {\n    opacity: 1;\n  }\n\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n  /* Adjusted from Seamless theme */\n  body.tc-body .tc-tiddler-frame {\n    padding: 0;\n  }\n  body.tc-body .tc-tiddler-info {\n    margin: 0;\n  }\n  body.tc-body .tc-message-box {\n    margin: 21px 0 21px 0;\n  }\n\n  /* Align page control buttons with tiddler control buttons */\n  body.tc-body .tc-sidebar-scrollable {\n    padding: 42px 0 28px 42px;\n  }\n  body.tc-body .tc-sidebar-header {\n    padding: 0;\n  }\n\n}&quot;
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrocallinline\n\n/* Implement fluid typography */\n&lt;&lt;fluid-typography-global selector:\&quot;html\&quot;&gt;&gt;\n&lt;&lt;fluid-typography-body selector:\&quot;body.tc-body .tc-tiddler-frame .tc-tiddler-body\&quot;&gt;&gt;\nbody.tc-body {\n  font-size: inherit;\n}\n\n/* Adjusted from Seamless theme */\nhtml body.tc-body {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nhtml:-webkit-full-screen {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\n  background-color: &lt;&lt;colour background&gt;&gt;;\n}\nbody.tc-body .tc-tiddler-frame {\n  border: 0;\n  padding: 0 14px;\n  margin-bottom: 58px;\n}\nbody.tc-body .tc-tiddler-info {\n  border: 0;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n/* Give a bit more space to title icons */\nbody.tc-body .tc-tiddler-title-icon {\n  margin-right: 10px;\n}\n\n/* Increase size of title icons */\nbody.tc-body .tc-tiddler-title-icon svg {\n  height: .9em;\n  width: 1em;\n}\n\n/* Hide empty elements so that title and subtitle align with body */\nbody.tc-body .tc-titlebar .tc-tiddler-title-icon:empty,\nbody.tc-body .tc-subtitle &gt; .tc-tiddlylink:empty {\n  margin-right: 0;\n}\n\n/* Reposition top bar elements */\nbody.tc-body .tc-topbar-left {\n  top: 5px;\n  left: 5px;\n}\nbody.tc-body .tc-topbar-right {\n  top: 5px;\n  right: 5px;\n}\n\n/* Align page control buttons with tiddler control buttons */\nbody.tc-body .tc-page-controls {\n  font-size: 2.35em;\n  line-height: 1.2em;\n  margin-top: calc(-1em / 2.35);\n}\nbody.tc-body .tc-page-controls button {\n  margin-right: 5px;\n}\nbody.tc-body .tc-page-controls button svg.tc-image-button,\nbody.tc-body .tc-page-controls button .tc-image-button img {\n  height: .75em;\n}\n\n/* Fix alignment of search dropdown */\nbody.tc-body .tc-block-dropdown.tc-search-drop-down {\n  margin-left: 0;\n}\n\n/* Let menu list items wrap normally */\nbody.tc-body .tc-menu-list-item {\n  white-space: normal;\n}\n\n/* Change the vertical alignment of the menu list mini buttons */\nbody.tc-body .tc-sidebar-lists button.tc-btn-mini {\n  vertical-align: text-bottom;\n}\n\n/* Change the color of the menu list mini buttons */\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground&gt;&gt;;\n}\nbody.tc-body .tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini:hover svg {\n  fill: &lt;&lt;colour sidebar-muted-foreground-hover&gt;&gt;;\n}\n\n/* Increase padding of menu list subitems */\nbody.tc-body .tc-menu-list-subitem {\n  padding-left: 14px;\n}\n\nbody.tc-body .tc-remove-tag-button {\n  fill: &lt;&lt;colour tag-foreground&gt;&gt;;\n}\n\n/* Increase padding for draft indicators */\nbody.tc-body .tc-drafts-list a {\n  padding: 14px;\n}\n\n/* Reset the font weight for these things */\nh1, h2, h3, h4, h5, h6,\nbody.tc-body a.tc-tiddlylink,\nbody.tc-body button.tc-tiddlylink {\n  font-weight: 400;\n}\n\n/* Add indicator to external links */\nbody.tc-body .tc-tiddlylink-external::after {\n  content: ' ↗';\n}\n\n/* Uniformize backgrounds and borders */\nhtml button,\nselect {\n  border: 1px solid &lt;&lt;colour button-border&gt;&gt;;\n}\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]) {\n\tbackground-color: &lt;&lt;colour tiddler-editor-background&gt;&gt;;\n\tborder: 1px solid &lt;&lt;colour tiddler-editor-border&gt;&gt;;\n}\nhtml button,\nselect,\ntextarea,\ninput[type=\&quot;text\&quot;],\ninput[type=\&quot;search\&quot;],\ninput[type=\&quot;\&quot;],\ninput:not([type]),\n.tc-drop-down {\n  border-radius: 2px;\n}\n.tc-alert,\n.tc-notification {\n  border-radius: 6px;\n}\n\n/* Fix padding of some blocks */\nblockquote {\n  margin-left: 0;\n}\npre {\n  max-width: calc(100vw - 28px);\n  padding: 14px;\n}\n\n@media (hover: hover) {\n\n  /* Hide tiddler controls until hover */\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button {\n    opacity: 0;\n    &lt;&lt;transition \&quot;opacity 150ms ease-in-out\&quot;&gt;&gt;\n  }\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button[class$=\&quot;%2Fcore%2Fui%2FButtons%2Fclose\&quot;],\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls button.tc-selected,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:focus-within button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls:hover button,\n  body.tc-body .tc-tiddler-view-frame .tc-tiddler-controls .tc-popup button {\n    opacity: 1;\n  }\n\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n  /* Adjusted from Seamless theme */\n  body.tc-body .tc-tiddler-frame {\n    padding: 0;\n  }\n  body.tc-body .tc-tiddler-info {\n    margin: 0;\n  }\n  body.tc-body .tc-message-box {\n    margin: 21px 0 21px 0;\n  }\n\n  /* Align page control buttons with tiddler control buttons */\n  body.tc-body .tc-sidebar-scrollable {\n    padding: 42px 0 28px 42px;\n  }\n  body.tc-body .tc-sidebar-header {\n    padding: 0;\n  }\n\n}&quot;
         },
         &quot;$:/themes/unindented/sine/ui/Buttons/palette-switcher&quot;: {
             &quot;title&quot;: &quot;$:/themes/unindented/sine/ui/Buttons/palette-switcher&quot;,
@@ -10347,11 +10398,22 @@ Sine Theme
 &lt;/$draggable&gt;
 &lt;/span&gt;
 
-!! Chandler Macro
+!! Hide Sidebar Plugin
+
+This plugin automatically hides the sidebar on screens smaller than the configured breakpoint.
+
+To install, drag this into your ~TiddlyWiki:
+&lt;span class=&quot;tc-tag-label tc-btn-invisible&quot; style=&quot;cursor: move&quot;&gt;
+&lt;$draggable filter=&quot;$:/plugins/unindented/hidesidebar&quot;&gt;
+Hide Sidebar
+&lt;/$draggable&gt;
+&lt;/span&gt;
+
+!! Chandler Plugin
 
 The Chandler system, as described by Joe Armstrong in his post [[Fun with the TiddlyWiki|https://joearms.github.io/#2018-12-26%20Fun%20with%20the%20TiddlyWiki]], is a triage system to manage lists of tasks that must be done now, later, or which were done.
 
-You can see an example here: [[Books To Read]]
+This plugin adds a macro to make it easy to triage tiddlers. You can see an example here: [[Books To Read]]
 
 To install, drag this into your ~TiddlyWiki:
 &lt;span class=&quot;tc-tag-label tc-btn-invisible&quot; style=&quot;cursor: move&quot;&gt;
