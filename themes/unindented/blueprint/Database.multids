@@ -1,7 +1,7 @@
-title: $:/themes/unindented/sine/Database/
+title: $:/themes/unindented/blueprint/Database/
 
-lightpalette: $:/themes/unindented/sine/palettes/Light
-darkpalette: $:/themes/unindented/sine/palettes/Dark
+lightpalette: $:/themes/unindented/blueprint/palettes/Light
+darkpalette: $:/themes/unindented/blueprint/palettes/Dark
 
 maxfontsize: 19px
 maxbodyfontsize: 20px

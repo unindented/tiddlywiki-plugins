@@ -11,7 +11,7 @@
     "tiddlywiki/vanilla",
     "tiddlywiki/snowwhite",
     "tiddlywiki/seamless",
-    "unindented/sine"
+    "unindented/blueprint"
   ],
   "build": {
     "index": [

@@ -1,5 +1,5 @@
-title: $:/themes/unindented/sine/palettes/Light
-name: Sine (Light)
+title: $:/themes/unindented/blueprint/palettes/Light
+name: Blueprint (Light)
 description: Light palette based on Mineral UI colors
 tags: $:/tags/Palette
 type: application/x-tiddler-dictionary
@@ -258,8 +258,11 @@ wikilist-droplink-dragover: <<colour palette-gray-40>>
 wikilist-button-background: <<colour palette-gray-40>>
 wikilist-button-foreground: <<colour foreground>>
 
-jumbotron-background-1: <<colour palette-blue-90>>
-jumbotron-background-2: <<colour palette-purple-80>>
+jumbotron-background: <<colour palette-blue-90>>
+jumbotron-foreground: <<colour palette-white>>
+overlay-1: rgba(255, 255, 255, 0.1)
+overlay-2: rgba(255, 255, 255, 0.1)
+overlay-3: rgba(255, 255, 255, 0.75)
 
 highlight-comment: <<colour palette-gray-60>>
 highlight-meta: <<colour palette-gray-60>>

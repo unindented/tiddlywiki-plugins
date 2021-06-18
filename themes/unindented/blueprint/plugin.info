@@ -1,6 +1,6 @@
 {
-  "title": "$:/themes/unindented/sine",
-  "name": "Sine",
+  "title": "$:/themes/unindented/blueprint",
+  "name": "Blueprint",
   "description": "Theme with fluid typography, and light and dark palettes",
   "author": "Daniel Perez Alvarez",
   "core-version": ">=5.1.0",

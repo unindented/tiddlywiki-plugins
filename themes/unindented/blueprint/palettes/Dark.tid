@@ -1,5 +1,5 @@
-title: $:/themes/unindented/sine/palettes/Dark
-name: Sine (Dark)
+title: $:/themes/unindented/blueprint/palettes/Dark
+name: Blueprint (Dark)
 description: Dark palette based on Mineral UI colors
 tags: $:/tags/Palette
 type: application/x-tiddler-dictionary
@@ -258,8 +258,11 @@ wikilist-droplink-dragover: <<colour palette-gray-70>>
 wikilist-button-background: <<colour palette-gray-70>>
 wikilist-button-foreground: <<colour foreground>>
 
-jumbotron-background-1: <<colour palette-blue-30>>
-jumbotron-background-2: <<colour palette-purple-40>>
+jumbotron-background: <<colour palette-blue-20>>
+jumbotron-foreground: <<colour palette-black>>
+overlay-1: rgba(0, 0, 0, 0.1)
+overlay-2: rgba(0, 0, 0, 0.1)
+overlay-3: rgba(0, 0, 0, 0.5)
 
 highlight-comment: <<colour palette-gray-40>>
 highlight-meta: <<colour palette-gray-40>>

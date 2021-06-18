@@ -1,4 +1,4 @@
-title: $:/themes/unindented/sine/Jumbotron
+title: $:/themes/unindented/blueprint/Jumbotron
 tags: $:/tags/Jumbotron
 
 <h1><$text text={{$:/SiteTitle}}/></h1>

@@ -2,15 +2,15 @@ title: Hello There
 
 This is a demo site for my [[TiddlyWiki|https://tiddlywiki.com/]] plugins and themes.
 
-!! Sine Theme
+!! Blueprint Theme
 
 It's the theme you're seeing right now! You can toggle between light and dark palettes by clicking here:
-<span style="font-size: 1.2em;">{{$:/themes/unindented/sine/ui/Buttons/palette-switcher}}</span>
+<span style="font-size: 1.2em;">{{$:/themes/unindented/blueprint/ui/Buttons/palette-switcher}}</span>
 
 To install, drag this into your ~TiddlyWiki:
 <span class="tc-tag-label tc-btn-invisible" style="cursor: move">
-<$draggable filter="$:/themes/unindented/sine $:/theme $:/palette">
-Sine Theme
+<$draggable filter="$:/themes/unindented/blueprint $:/theme $:/palette">
+Blueprint Theme
 </$draggable>
 </span>
 

@@ -1,9 +1,9 @@
-title: $:/language/unindented/sine/
+title: $:/language/unindented/blueprint/
 
 Splash/text: {{$:/SiteTitle}} is loading...
 
-Config/caption: Sine Tweaks
-Config/description: You can tweak certain aspects of the ''Sine'' theme.
+Config/caption: Blueprint Tweaks
+Config/description: You can tweak certain aspects of the ''Blueprint'' theme.
 Config/palettes: Palettes
 Config/lightpalette: Light palette
 Config/darkpalette: Dark palette

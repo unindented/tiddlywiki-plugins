@@ -1,4 +1,4 @@
-title: $:/themes/unindented/sine/Macros
+title: $:/themes/unindented/blueprint/Macros
 tags: $:/tags/Macro
 
 \define fluid-typography(selector)
@@ -27,9 +27,9 @@ $selector$ {
 \define fluid-typography-global(selector)
 <$vars
   minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/fontsize}}
-  maxfontsize={{$:/themes/unindented/sine/Database/maxfontsize}}
-  minscreensize={{$:/themes/unindented/sine/Database/minscreensize}}
-  maxscreensize={{$:/themes/unindented/sine/Database/maxscreensize}}>
+  maxfontsize={{$:/themes/unindented/blueprint/Database/maxfontsize}}
+  minscreensize={{$:/themes/unindented/blueprint/Database/minscreensize}}
+  maxscreensize={{$:/themes/unindented/blueprint/Database/maxscreensize}}>
 <<fluid-typography selector:"$selector$">>
 </$vars>
 \end
@@ -37,9 +37,9 @@ $selector$ {
 \define fluid-typography-body(selector)
 <$vars
   minfontsize={{$:/themes/tiddlywiki/vanilla/metrics/bodyfontsize}}
-  maxfontsize={{$:/themes/unindented/sine/Database/maxbodyfontsize}}
-  minscreensize={{$:/themes/unindented/sine/Database/minscreensize}}
-  maxscreensize={{$:/themes/unindented/sine/Database/maxscreensize}}>
+  maxfontsize={{$:/themes/unindented/blueprint/Database/maxbodyfontsize}}
+  minscreensize={{$:/themes/unindented/blueprint/Database/minscreensize}}
+  maxscreensize={{$:/themes/unindented/blueprint/Database/maxscreensize}}>
 <<fluid-typography selector:"$selector$">>
 </$vars>
 \end

@@ -1,9 +1,9 @@
-title: $:/themes/unindented/sine/Splash
+title: $:/themes/unindented/blueprint/Splash
 tags: $:/tags/RawMarkupWikified/TopBody
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline
 
-\define lingo-base() $:/language/unindented/sine/Splash/
+\define lingo-base() $:/language/unindented/blueprint/Splash/
 
 <div class="tc-remove-when-wiki-loaded">
   <style>

@@ -1,32 +1,32 @@
-title: $:/themes/unindented/sine/ui/Buttons/palette-switcher
+title: $:/themes/unindented/blueprint/ui/Buttons/palette-switcher
 tags: $:/tags/PageControls
 list-before: $:/core/ui/Buttons/palette
-caption: {{$:/core/images/tip}} {{$:/language/unindented/sine/Buttons/PaletteSwitcher/caption}}
-description: {{$:/language/unindented/sine/Buttons/PaletteSwitcher/description}}
+caption: {{$:/core/images/tip}} {{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/caption}}
+description: {{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/description}}
 
 \whitespace trim
-<$list filter="[[$:/palette]!text{$:/themes/unindented/sine/Database/darkpalette}]">
-  <$button set="$:/palette" setTo={{$:/themes/unindented/sine/Database/darkpalette}} tooltip={{$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/tooltip}} aria-label={{$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/label}} class=<<tv-config-toolbar-class>>>
+<$list filter="[[$:/palette]!text{$:/themes/unindented/blueprint/Database/darkpalette}]">
+  <$button set="$:/palette" setTo={{$:/themes/unindented/blueprint/Database/darkpalette}} tooltip={{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/dark/tooltip}} aria-label={{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/dark/label}} class=<<tv-config-toolbar-class>>>
     <$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
       {{$:/core/images/tip}}
     </$list>
     <$list filter="[<tv-config-toolbar-text>prefix[yes]]">
       <span class="tc-btn-text">
         <$text text=" "/>
-        {{$:/language/unindented/sine/Buttons/PaletteSwitcher/dark/text}}
+        {{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/dark/text}}
       </span>
     </$list>
   </$button>
 </$list>
-<$list filter="[[$:/palette]text{$:/themes/unindented/sine/Database/darkpalette}]">
-  <$button set="$:/palette" setTo={{$:/themes/unindented/sine/Database/lightpalette}} tooltip={{$:/language/unindented/sine/Buttons/PaletteSwitcher/light/tooltip}} aria-label={{$:/language/unindented/sine/Buttons/PaletteSwitcher/light/label}} class=<<tv-config-toolbar-class>>>
+<$list filter="[[$:/palette]text{$:/themes/unindented/blueprint/Database/darkpalette}]">
+  <$button set="$:/palette" setTo={{$:/themes/unindented/blueprint/Database/lightpalette}} tooltip={{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/light/tooltip}} aria-label={{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/light/label}} class=<<tv-config-toolbar-class>>>
     <$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
       {{$:/core/images/tip}}
     </$list>
     <$list filter="[<tv-config-toolbar-text>prefix[yes]]">
       <span class="tc-btn-text">
         <$text text=" "/>
-        {{$:/language/unindented/sine/Buttons/PaletteSwitcher/light/text}}
+        {{$:/language/unindented/blueprint/Buttons/PaletteSwitcher/light/text}}
       </span>
     </$list>
   </$button>
