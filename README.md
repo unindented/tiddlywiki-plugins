@@ -28,7 +28,7 @@ yarn build
 
 ## Meta
 
-- Code: `git clone git://github.com/unindented/tiddlywiki-plugins.git`
+- Code: `git clone https://github.com/unindented/tiddlywiki-plugins.git`
 - Home: <https://github.com/unindented/tiddlywiki-plugins>
 
 ## Contributors
